@@ -167,7 +167,7 @@ dokumen teks dalam proyek ini.
 Peraturan akademis, terutama terkait **plagiarisme**, tetap berlaku sebagaimana
 yang telah dijelaskan dalam perkuliahan.
 
-[tp1]: assignment1/README.MD
+[tp1]: assignment1/README.md
 [fork]: ../-/forks/new
 [repositori-pusat]: https://gitlab.com/DDP2-CSUI/2020/assignments
 [panduan-commit]: https://chris.beams.io/posts/git-commit
