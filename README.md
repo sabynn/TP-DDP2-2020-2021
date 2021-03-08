@@ -172,7 +172,7 @@ yang telah dijelaskan dalam perkuliahan.
 [panduan-commit]: https://chris.beams.io/posts/git-commit
 [panduan-konflik]: https://githowto.com/resolving_conflicts
 [pipelines]: ../pipelines
-[issues]: https://gitlab.com/DDP2-CSUI/2020/assignments/issues
+[issues]: https://gitlab.com/DDP2-CSUI/2020-2021-genap/assignments/issues
 [repositori-2018]: https://gitlab.com/DDP2-CSUI/assignment
 [repositori-2019-2020-genap]: https://gitlab.com/DDP2-CSUI/2020/assignments
 [lisensi-bsd]: LICENSE
