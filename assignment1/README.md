@@ -32,12 +32,16 @@ Silakan baca [dokumen soal][dokumen tp1].
 Silakan ikuti persiapan yang ada pada berkas [`README.md`][root-readme] di
 *root* repositori ini.
 
+> Template pengerjaan tugas ini disediakan di *path* 
+`src\main\java\assignments\assignment1` 
+
 ## Menjalankan dan menguji program
 
 > Catatan:<br> 
 > - Ubah `gradlew.bat` dengan `./gradlew` dan `\` dengan `/` jika kamu
 menggunakan Linux/Mac.
-> - Tanda <kbd>></kbd> pada awal *command* tidak perlu ditulis. Digunakan sebagai pembeda antara *command* dan *output*-nya
+> - Tanda <kbd>></kbd> pada awal *command* tidak perlu ditulis. 
+Digunakan sebagai pembeda antara *command* dan *output*-nya
 
 Kamu bisa menjalankan beberapa *task* dengan Gradle melalui IDE atau
 terminal/Command Prompt.
