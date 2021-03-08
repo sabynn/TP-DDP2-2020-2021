@@ -33,11 +33,8 @@ public class ExtractNPM {
                 break;
             }
 
-            boolean valid = validate(npm);
-            // TODO: after you check valid or not, what should you do ?
-
-            String result = extract(npm);
-            System.out.println(result);
+            // TODO: Check validate and extract NPM
+            
         }
         input.close();
     }
