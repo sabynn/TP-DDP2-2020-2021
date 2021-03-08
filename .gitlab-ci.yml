@@ -1,0 +1,33 @@
+image: gradle:6.8.3-jdk15
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script: gradle build -x test
+  cache:
+    key: "$CI_COMMIT_REF_NAME"
+    paths:
+      - assignment*/build
+      - .gradle
+  rules:
+    - if: '$CI_PROJECT_NAMESPACE != "DDP2-CSUI/2020-2021-genap"'
+
+test:a1:
+  stage: test
+  script: gradle :assignment1:test
+  cache:
+    key: "$CI_COMMIT_REF_NAME"
+    paths:
+      - assignment1/build
+      - .gradle
+  artifacts:
+    paths:
+      - assignment1
+    when: always
+  rules:
+    - if: '$CI_PROJECT_NAMESPACE != "DDP2-CSUI/2020-2021-genap"'
+      changes:
+      - assignment1/**/*

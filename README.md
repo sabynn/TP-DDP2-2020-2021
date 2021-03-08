@@ -8,7 +8,7 @@ Semester Genap 2019/2020
 ## Daftar Isi
 
 1. Soal Tugas Pemrograman
-    TBD
+   1. [Tugas Pemrograman 1][tp1]
 2. [Memulai](#memulai)
 3. [Mengerjakan Tugas Pemrograman](#mengerjakan-tugas-pemrograman)
 4. [Mendapatkan pembaruan dari *upstream*](#mendapatkan-pembaruan-dari-upstream)
@@ -167,6 +167,7 @@ dokumen teks dalam proyek ini.
 Peraturan akademis, terutama terkait **plagiarisme**, tetap berlaku sebagaimana
 yang telah dijelaskan dalam perkuliahan.
 
+[tp1]: assignment1/README.MD
 [fork]: ../-/forks/new
 [repositori-pusat]: https://gitlab.com/DDP2-CSUI/2020/assignments
 [panduan-commit]: https://chris.beams.io/posts/git-commit
