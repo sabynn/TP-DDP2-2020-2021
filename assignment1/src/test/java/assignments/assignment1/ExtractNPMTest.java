@@ -58,6 +58,6 @@ public class ExtractNPMTest {
         String expected = "Tahun masuk: 2018\n";
         expected += "Jurusan: Ilmu Komputer\n";
         expected += "Tanggal Lahir: 09-03-2000";
-        assertEquals(ExtractNPM.extract(19011403200038L), expected);
+        assertEquals(ExtractNPM.extract(18010903200033L), expected);
     }
 }
