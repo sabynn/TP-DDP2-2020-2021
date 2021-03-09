@@ -24,7 +24,7 @@ Semester Genap 2020/2021
    *Settings* (di sebelah kiri bawah) > *General* >
    *Visibility, project features, permissions* > *Project visibility* >
    *Private* > *Save changes*.
-3. Tambahkan asdos kamu sebagai anggota di repositori kamu melalui *Settings* >
+3. Tambahkan `asdos kamu` dan `@dekdepe` sebagai anggota di repositori kamu melalui *Settings* >
    *Members* dengan hak akses ***Maintainer***.
 4. Kembali ke *Project overview*, klik tombol ***Clone*** yang ada di kanan atas.
 5. Salin pranala (*link*) **HTTPS** (atau SSH jika kamu sudah mengaturnya) yang
