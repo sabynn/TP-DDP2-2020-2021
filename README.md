@@ -1,14 +1,14 @@
 # Tugas Pemrograman
 
 CSGE601021 Dasar-Dasar Pemrograman 2 @ Fakultas Ilmu Komputer Universitas Indonesia,
-Semester Genap 2019/2020
+Semester Genap 2020/2021
 
 * * *
 
 ## Daftar Isi
 
 1. Soal Tugas Pemrograman
-    TBD
+   1. [Tugas Pemrograman 1][tp1]
 2. [Memulai](#memulai)
 3. [Mengerjakan Tugas Pemrograman](#mengerjakan-tugas-pemrograman)
 4. [Mendapatkan pembaruan dari *upstream*](#mendapatkan-pembaruan-dari-upstream)
@@ -19,7 +19,7 @@ Semester Genap 2019/2020
 
 ## Memulai
 
-1. [***Fork***][fork] repositori ini ke akun GitLab kamu.
+1. **Fork** repositori ini ke akun GitLab kamu.
 2. Ubah visibilitas repositori hasil *fork* tersebut menjadi ***private*** melalui
    *Settings* (di sebelah kiri bawah) > *General* >
    *Visibility, project features, permissions* > *Project visibility* >
@@ -167,7 +167,7 @@ dokumen teks dalam proyek ini.
 Peraturan akademis, terutama terkait **plagiarisme**, tetap berlaku sebagaimana
 yang telah dijelaskan dalam perkuliahan.
 
-[fork]: ../-/forks/new
+[tp1]: assignment1/README.md
 [repositori-pusat]: https://gitlab.com/DDP2-CSUI/2020/assignments
 [panduan-commit]: https://chris.beams.io/posts/git-commit
 [panduan-konflik]: https://githowto.com/resolving_conflicts
