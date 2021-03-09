@@ -45,6 +45,7 @@ Digunakan sebagai pembeda antara *command* dan *output*-nya
 
 Kamu bisa menjalankan beberapa *task* dengan Gradle melalui IDE atau
 terminal/Command Prompt.
+Jalankan *task* tersebut di root folder dari repository ini.
 
 Untuk menjalankan program:
 
@@ -115,6 +116,8 @@ tersebut diidentifikasi dengan memeriksa GitLab Pipelines.
       GitLab kamu.
 - [ ] Implementasikan method `validate` dengan benar.
 - [ ] Implementasikan method `extract` dengan benar.
+- [ ] Implementasikan TODO pada method `main` agar sesuai dengan 
+      output yang diinginkan
 - [ ] Demonstrasikan program kamu ke asdos kamu.
 
 ## Penilaian
