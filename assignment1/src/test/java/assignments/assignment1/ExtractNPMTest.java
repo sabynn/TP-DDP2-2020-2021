@@ -54,7 +54,7 @@ public class ExtractNPMTest {
     }
 
     @Test
-    public void testExtractCorrectTwo() {
+    public void testExtractCorrectThree() {
         String expected = "Tahun masuk: 2018\n";
         expected += "Jurusan: Ilmu Komputer\n";
         expected += "Tanggal Lahir: 09-03-2000";
