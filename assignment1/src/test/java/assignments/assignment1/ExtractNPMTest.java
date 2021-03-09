@@ -18,6 +18,11 @@ public class ExtractNPMTest {
     }
 
     @Test
+    public void testValidateCorrectThree() {
+        assertEquals(ExtractNPM.validate(18010903200033L), true);
+    }
+
+    @Test
     public void testValidateFalseOne() {
         assertEquals(ExtractNPM.validate(20021907200237L), false);
     }
@@ -36,7 +41,7 @@ public class ExtractNPMTest {
     public void testExtractCorrectOne() {
         String expected = "Tahun masuk: 2020\n";
         expected += "Jurusan: Sistem Informasi\n";
-        expected += "Tanggal Lahir: 28-8-2000";
+        expected += "Tanggal Lahir: 28-08-2000";
         assertEquals(ExtractNPM.extract(20022808200017L), expected);
     }
 
@@ -44,8 +49,15 @@ public class ExtractNPMTest {
     public void testExtractCorrectTwo() {
         String expected = "Tahun masuk: 2019\n";
         expected += "Jurusan: Ilmu Komputer\n";
-        expected += "Tanggal Lahir: 14-3-2000";
+        expected += "Tanggal Lahir: 14-03-2000";
         assertEquals(ExtractNPM.extract(19011403200038L), expected);
     }
 
+    @Test
+    public void testExtractCorrectTwo() {
+        String expected = "Tahun masuk: 2018\n";
+        expected += "Jurusan: Ilmu Komputer\n";
+        expected += "Tanggal Lahir: 09-03-2000";
+        assertEquals(ExtractNPM.extract(19011403200038L), expected);
+    }
 }
