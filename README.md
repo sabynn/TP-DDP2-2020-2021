@@ -168,7 +168,7 @@ Peraturan akademis, terutama terkait **plagiarisme**, tetap berlaku sebagaimana
 yang telah dijelaskan dalam perkuliahan.
 
 [tp1]: assignment1/README.md
-[repositori-pusat]: https://gitlab.com/DDP2-CSUI/2020/assignments
+[repositori-pusat]: https://gitlab.com/DDP2-CSUI/2020-2021-genap/assignments
 [panduan-commit]: https://chris.beams.io/posts/git-commit
 [panduan-konflik]: https://githowto.com/resolving_conflicts
 [pipelines]: ../pipelines
