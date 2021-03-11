@@ -32,7 +32,7 @@ public class ExtractNPM {
         for (int i=0;i<=nums.length/2;i++){
             int num;
             if (i==6) {
-                //
+                // mendapat nilai digit ke-7 yg akan langsung diteruskan ke penambahan tanpa perkalian dgn digit lain
                 num = nums[i] - '0';
             }
             else {
