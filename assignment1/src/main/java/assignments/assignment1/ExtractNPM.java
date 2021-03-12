@@ -11,15 +11,14 @@ public class ExtractNPM {
         // mengecek kevalidan panjang input
         boolean validLength = String.valueOf(npm).length() == 14;
 
-        // mengecek kevalidan panjang umur, kode jurusan, dan kode npm
-        if (validLength) {
-            boolean validAge = ((2021 - birthYear) >= 15);
-            boolean validMajor = (major == 1) || (major == 2) || (major == 3) || (major == 11) || (major == 12);
-            boolean validComputation = validateComputation(npm / 10, npm % 10);
-            return validAge && validMajor && validComputation;
-        }
         // mengembalikan boolean sesuai kevalidan input npm
-        return validLength;
+        if (!validLength) return validLength;
+
+        // mengecek kevalidan panjang umur, kode jurusan, dan kode npm
+        boolean validAge = ((2021 - birthYear) >= 15);
+        boolean validMajor = (major == 1) || (major == 2) || (major == 3) || (major == 11) || (major == 12);
+        boolean validComputation = validateComputation(npm / 10, npm % 10);
+        return validAge && validMajor && validComputation;
     }
 
     // Method untuk mengecek kevalidan nilai kode npm berdasarkan hasil komputasi
