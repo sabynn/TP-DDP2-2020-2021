@@ -44,7 +44,7 @@ public class ExtractNPM {
         }
 
         // jika hasil komputasi masih >=10 ,dilakukan penjumlahan antardigit
-        if (result >= 10) result= (result/10) + (result%10);
+        while (result >= 10) result= (result/10) + (result%10);
         // mengembalikan boolean sesuai kesamaan hasil komputasi dengan kode npm dari input
         return result == c;
     }
