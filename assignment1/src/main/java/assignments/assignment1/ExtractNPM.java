@@ -8,17 +8,16 @@ public class ExtractNPM {
         // mendapatkan nilai tahun lahir dan kode jurusan dari input npm
         int birthYear = (int) ((npm/10E+6) / 10E+4);
         int major = (int) ((npm / 10E+9) % 100);
+
         // mengecek kevalidan panjang input
-        boolean validLength = String.valueOf(npm).length() == 14;
-
-        // mengembalikan boolean sesuai kevalidan input npm
-        if (!validLength) return validLength;
-
-        // mengecek kevalidan panjang umur, kode jurusan, dan kode npm
-        boolean validAge = ((2021 - birthYear) >= 15);
-        boolean validMajor = (major == 1) || (major == 2) || (major == 3) || (major == 11) || (major == 12);
-        boolean validComputation = validateComputation(npm / 10, npm % 10);
-        return validAge && validMajor && validComputation;
+        if (String.valueOf(npm).length() == 14)
+            // mengecek kevalidan umur
+            if (((2021 - birthYear) >= 15))
+                // mengecek kevalidan kode jurusan
+                if ((major == 1) || (major == 2) || (major == 3) || (major == 11) || (major == 12))
+                    // mengecek kevalidan kode npm dengan memanggil dan mengembalikan hasil method validateComputation
+                    return validateComputation(npm / 10, npm % 10);
+        return false;
     }
 
     // Method untuk mengecek kevalidan nilai kode npm berdasarkan hasil komputasi
@@ -28,22 +27,17 @@ public class ExtractNPM {
         long result = 0;
 
         // looping untuk mengakses digit per index dalam array
-        for (int i=0;i<=nums.length/2;i++){
+        for (int i=0;i<nums.length/2;i++){
             int num;
-            if (i==6) {
-                // mendapat nilai digit ke-7 yg akan langsung diteruskan ke penambahan tanpa perkalian dgn digit lain
-                num = nums[i] - '0';
-            }
-            else {
-                // melakukan perkalian antardigit sesuai aturan komputasi
-                num = nums[nums.length-(i + 1)] - '0';
-                num *= (nums[i] - '0');
-            }
+            // melakukan perkalian antardigit sesuai aturan komputasi
+            num = nums[nums.length-(i + 1)] - '0';
+            num *= (nums[i] - '0');
             // menambahkan semua hasil perkalian antardigit sebelumnya
             result += num;
         }
-
-        // jika hasil komputasi masih >=10 ,dilakukan penjumlahan antardigit
+        // menambahkan nilai digit ke-7 ke total akhir
+        result += nums[6] - '0';
+        // jika hasil perhitungan masih >=10 ,dilakukan penjumlahan antardigit
         while (result >= 10) result= (result/10) + (result%10);
         // mengembalikan boolean sesuai kesamaan hasil komputasi dengan kode npm dari input
         return result == c;
