@@ -1,4 +1,4 @@
-# Tugas Pemrograman 1: NPM Extractor
+# Tugas Pemrograman 2: Sistem Akademik Fasilkom
 
 CSGE601021 Dasar-Dasar Pemrograman 2 @ Fakultas Ilmu Komputer Universitas Indonesia,
 Semester Genap 2020/2021
