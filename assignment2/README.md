@@ -53,7 +53,7 @@ Untuk menjalankan program:
 > gradlew.bat :assignment2:run --console plain
 ```
 
-Untuk menguji program dengan *test case* yang disediakan:
+Untuk menguji program dengan *unit test* yang disediakan:
 
 ```bash
 > gradlew.bat :assignment2:test
@@ -70,6 +70,11 @@ Untuk melihat output program dengan *test case* input yang disediakan:
 ```
 
 *Hint*: kamu juga bisa menggunakan `>` setelah penjalanan command diatas untuk menyimpan output ke dalam sebuah *file* (lampirkan juga nama file yang akan dijadikan tempat peletakan output).
+
+Contoh:
+```bash
+> gradlew.bat :assignment2:run --console plain --quiet < assignment2\testcases\in\in1.txt > assignment2\testcases\out1.txt
+```
 
 Jika kamu tidak ingin menggunakan Gradle, kamu juga bisa melakukan kompilasi
 dan menjalankan program dengan `javac` dan `java` seperti biasa. Masuk ke
