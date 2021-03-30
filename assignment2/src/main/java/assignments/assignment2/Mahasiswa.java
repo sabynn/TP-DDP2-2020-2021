@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Mahasiswa {
     private MataKuliah[] mataKuliah = new MataKuliah[10];
-    private String[] masalahIRS = new String[20];
+    private String[] masalahIRS;
     private int totalSKS;
     private String nama;
     private String jurusan;
@@ -59,11 +59,10 @@ public class Mahasiswa {
         return false;
     }
 
-
     // method untuk menambahkan mata kuliah
     public void addMatkul(MataKuliah matkul){
         // handle output jika matkul sudah diambil sebelumnya
-        if (cekMatkulDiambil(matkul)){
+        if (this.cekMatkulDiambil(matkul)){
             System.out.println("[DITOLAK] " + matkul +" telah diambil sebelumnya.");
         }
         // handle output jika kapasitas matkul sudah penuh
@@ -85,13 +84,15 @@ public class Mahasiswa {
     }
 
     public void dropMatkul(MataKuliah matkul){
-        if (!cekMatkulDiambil(matkul)){
+        if (this.cekMatkulDiambil(matkul)){
             // menginisiasi Arrays baru untuk menampung matkul selain matkul yang didrop
             MataKuliah[] temp = new MataKuliah[10];
+            int c = 0;
             // looping untuk memasukkan matkul selain matkul yang didrop ke Arrays temp
-            for (int i=0;i<jumlahMatkul;i++){
-                if (mataKuliah[i].equals(matkul)) {
-                    temp[i] = mataKuliah[i];
+            for (MataKuliah mk: this.mataKuliah){
+                if (mk != null && !(mk.toString().equals(matkul.toString()))) {
+                    temp[c] = mk;
+                    c++;
                 }
             }
             // mengubah reference Arrays mataKuliah ke temp
@@ -102,10 +103,13 @@ public class Mahasiswa {
             matkul.dropMahasiswa(this);
         }
         // handle output jika matkul belum pernah diambil
-        else System.out.println("[DITOLAK] " + matkul + " belum pernah diambil.");
+        else System.out.println("[DITOLAK] " + mataKuliah + " belum pernah diambil.");
     }
 
     public void cekIRS(){
+        // inisiasi Arrays masalahIRS
+        this.masalahIRS = new String[20];
+
         // assign singkatanJurusan sesuai jurusan mahasiswa
         String singkatanJurusan = "";
         if (jurusan.equals("Ilmu Komputer")) singkatanJurusan = "IK";
