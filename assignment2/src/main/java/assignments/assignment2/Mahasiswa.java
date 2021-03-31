@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Mahasiswa {
     private MataKuliah[] mataKuliah = new MataKuliah[10];
+    // inisiasi Arrays masalahIRS
     private String[] masalahIRS;
     private int totalSKS;
     private String nama;
@@ -15,6 +16,7 @@ public class Mahasiswa {
         // constructor untuk inisiasi atribut nama dan npm mahasiswa
         this.nama = nama;
         this.npm = npm;
+        masalahIRS = new String[20];
     }
 
     // getter untuk mengembalikan nilai dari atribut Mahasiswa
@@ -103,13 +105,10 @@ public class Mahasiswa {
             matkul.dropMahasiswa(this);
         }
         // handle output jika matkul belum pernah diambil
-        else System.out.println("[DITOLAK] " + mataKuliah + " belum pernah diambil.");
+        else System.out.println("[DITOLAK] " + matkul + " belum pernah diambil.");
     }
 
     public void cekIRS(){
-        // inisiasi Arrays masalahIRS
-        this.masalahIRS = new String[20];
-
         // assign singkatanJurusan sesuai jurusan mahasiswa
         String singkatanJurusan = "";
         if (jurusan.equals("Ilmu Komputer")) singkatanJurusan = "IK";
@@ -137,7 +136,7 @@ public class Mahasiswa {
         if (masalahIRS[0] == null) System.out.println("IRS tidak bermasalah.");
         else {
             // looping untuk mencetak String dalam masalahIRS
-            for (String h : masalahIRS) {
+            for (String h : this.masalahIRS) {
                 if (h == null) break;
                 System.out.println(h);
             }
