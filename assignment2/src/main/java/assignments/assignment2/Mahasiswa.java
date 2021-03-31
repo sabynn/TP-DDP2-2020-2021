@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class Mahasiswa {
     private MataKuliah[] mataKuliah = new MataKuliah[10];
-    // inisiasi Arrays masalahIRS
     private String[] masalahIRS;
     private int totalSKS;
     private String nama;
@@ -13,7 +12,7 @@ public class Mahasiswa {
     private int jumlahMatkul;
 
     public Mahasiswa(String nama, long npm){
-        // constructor untuk inisiasi atribut nama dan npm mahasiswa
+        // constructor untuk inisiasi atribut Mahasiswa
         this.nama = nama;
         this.npm = npm;
         masalahIRS = new String[20];
