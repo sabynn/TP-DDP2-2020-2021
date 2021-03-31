@@ -15,7 +15,7 @@ public class Mahasiswa {
         // constructor untuk inisiasi atribut Mahasiswa
         this.nama = nama;
         this.npm = npm;
-        masalahIRS = new String[20];
+        this.masalahIRS = new String[20];
     }
 
     // getter untuk mengembalikan nilai dari atribut Mahasiswa
