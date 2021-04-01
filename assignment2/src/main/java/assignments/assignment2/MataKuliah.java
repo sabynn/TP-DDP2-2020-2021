@@ -39,10 +39,8 @@ public class MataKuliah {
     }
 
     public void addMahasiswa(Mahasiswa mahasiswa) {
-        // menambahkan mahasiswa ke Arrays daftarMahasiswa dan menghentikan looping
-        this.daftarMahasiswa[jumlahMahasiswa] = mahasiswa;
-        // menambahkan jumlah mahasiswa
-        this.jumlahMahasiswa++;
+        // menambahkan mahasiswa ke Arrays daftarMahasiswa dan menambahkan jumlah mahasiswa
+        this.daftarMahasiswa[this.jumlahMahasiswa++] = mahasiswa;
     }
 
     public void dropMahasiswa(Mahasiswa mahasiswa) {
@@ -52,8 +50,7 @@ public class MataKuliah {
         // looping untuk memasukkan mahasiswa selain mahasiswa yang drop matkul ke Arrays temp
         for (Mahasiswa m: this.daftarMahasiswa){
             if (m != null && !(m.equals(mahasiswa))) {
-                temp[c] = m;
-                c++;
+                temp[c++] = m;
             }
         }
         // mengubah reference Arrays mataKuliah ke temp

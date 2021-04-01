@@ -67,7 +67,7 @@ public class Mahasiswa {
             System.out.println("[DITOLAK] " + matkul +" telah diambil sebelumnya.");
         }
         // handle output jika kapasitas matkul sudah penuh
-        else if (matkul.getJumlahMahasiswa() == matkul.getKapasitas() ) {
+        else if (matkul.getJumlahMahasiswa() == matkul.getKapasitas()) {
             System.out.println("[DITOLAK] " + matkul + " telah penuh kapasitasnya.");
         }
         // handle output jika matkul yang diambil sudah 10
@@ -75,11 +75,9 @@ public class Mahasiswa {
             System.out.println("[DITOLAK] Maksimal mata kuliah yang diambil hanya 10.");
         }
         else {
-            // menambahkan matkul ke Array mataKuliah
-            this.mataKuliah[jumlahMatkul] = matkul;
-            // menambahkan jumlah mata kuliah
-            this.jumlahMatkul++;
-            // menambahkan mahasiswa ke matakuliah dengan memanggil method addMahasiswa
+            // menambahkan matkul ke Array mataKuliah dan menambahkan jumlah mata kuliah
+            this.mataKuliah[this.jumlahMatkul++] = matkul;
+            // menambahkan mahasiswa ke Matakuliah dengan memanggil method addMahasiswa
             matkul.addMahasiswa(this);
         }
     }
@@ -92,8 +90,7 @@ public class Mahasiswa {
             // looping untuk memasukkan matkul selain matkul yang didrop ke Arrays temp
             for (MataKuliah mk: this.mataKuliah){
                 if (mk != null && !(mk.toString().equals(matkul.toString()))) {
-                    temp[c] = mk;
-                    c++;
+                    temp[c++] = mk;
                 }
             }
             // mengubah reference Arrays mataKuliah ke temp
@@ -113,21 +110,19 @@ public class Mahasiswa {
         if (jurusan.equals("Ilmu Komputer")) singkatanJurusan = "IK";
         else if (jurusan.equals("Sistem Informasi")) singkatanJurusan = "SI";
 
-        // counter untuk mengatur index masalahIRS
+        // counter untuk mengatur index Arrays masalahIRS
         int c = 1;
 
         // penambahan String ke masalahIRS jika  sks melebihi 24
         if (totalSKS > 24) {
-            this.masalahIRS[c-1] = c + ". SKS yang Anda ambil lebih dari 24";
-            c++;
+            this.masalahIRS[c-1] = (c++) + ". SKS yang Anda ambil lebih dari 24";
         }
 
         //looping untuk menambahkan String ke masalahIRS jika mata kuliah yang diambil tidak sesuai jurusan
         for (MataKuliah mk: this.mataKuliah){
             if (mk == null) break;
             else if (!(mk.getKode().equals(singkatanJurusan)) && !(mk.getKode().equals("CS"))){
-                this.masalahIRS[c-1] = c + ". Mata Kuliah " + mk + " tidak dapat diambil jurusan " + singkatanJurusan;
-                c++;
+                this.masalahIRS[c-1] = (c++) + ". Mata Kuliah " + mk + " tidak dapat diambil jurusan " + singkatanJurusan;
             }
         }
 
