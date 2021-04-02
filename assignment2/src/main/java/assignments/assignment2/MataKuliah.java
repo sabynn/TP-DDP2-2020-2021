@@ -39,7 +39,7 @@ public class MataKuliah {
     }
 
     public void addMahasiswa(Mahasiswa mahasiswa) {
-        // menambahkan mahasiswa ke Arrays daftarMahasiswa dan menambahkan jumlah mahasiswa
+        // menambahkan mahasiswa ke Arrays daftarMahasiswa dan menambahkan nilai jumlahMahasiswa
         this.daftarMahasiswa[this.jumlahMahasiswa++] = mahasiswa;
     }
 
@@ -55,7 +55,7 @@ public class MataKuliah {
         }
         // mengubah reference Arrays mataKuliah ke temp
         this.daftarMahasiswa = temp;
-        // mengurangi jumlah mahasiswa
+        // mengurangi nilai jumlahMahasiswa
         this.jumlahMahasiswa--;
     }
 

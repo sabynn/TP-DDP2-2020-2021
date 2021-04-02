@@ -74,7 +74,7 @@ public class Mahasiswa {
             System.out.println("[DITOLAK] Maksimal mata kuliah yang diambil hanya 10.");
         }
         else {
-            // menambahkan matkul ke Array mataKuliah dan menambahkan jumlah mata kuliah
+            // menambahkan matkul ke Array mataKuliah dan menambahkan nilai jumlahMatkul
             this.mataKuliah[this.jumlahMatkul++] = matkul;
             // menambahkan mahasiswa ke Matakuliah dengan memanggil method addMahasiswa
             matkul.addMahasiswa(this);
@@ -88,13 +88,13 @@ public class Mahasiswa {
             int c = 0;
             // looping untuk memasukkan matkul selain matkul yang didrop ke Arrays temp
             for (MataKuliah mk: this.mataKuliah){
-                if (mk != null && !(mk.toString().equals(matkul.toString()))) {
+                if (mk != null && !(mk.equals(matkul))) {
                     temp[c++] = mk;
                 }
             }
             // mengubah reference Arrays mataKuliah ke temp
             this.mataKuliah = temp;
-            // mengupdate jumlah mata kuliah dengan memanggil method hitung mata kuliah
+            // mengurangi nilai jumlahMatkul
             this.jumlahMatkul--;
             //menghilangkan mahasiswa dari matakuliah dengan memanggil method dropMahasiswa
             matkul.dropMahasiswa(this);
