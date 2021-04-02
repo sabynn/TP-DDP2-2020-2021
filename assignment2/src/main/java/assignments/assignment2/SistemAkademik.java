@@ -190,7 +190,7 @@ public class SistemAkademik {
             int kapasitas = Integer.parseInt(dataMatkul[3]);
 
             // membuat instance MataKuliah sesuai constructor dan masukkan ke dalam Array daftarMataKuliah
-            daftarMataKuliah[i] = new MataKuliah(dataMatkul[0], dataMatkul[1], sks, kapasitas);;
+            daftarMataKuliah[i] = new MataKuliah(dataMatkul[0], dataMatkul[1], sks, kapasitas);
         }
 
         System.out.print("Banyaknya Mahasiswa di Fasilkom: ");

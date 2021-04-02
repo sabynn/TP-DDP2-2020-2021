@@ -1,6 +1,5 @@
 package assignments.assignment2;
 
-import java.util.Arrays;
 
 public class Mahasiswa {
     private MataKuliah[] mataKuliah = new MataKuliah[10];
