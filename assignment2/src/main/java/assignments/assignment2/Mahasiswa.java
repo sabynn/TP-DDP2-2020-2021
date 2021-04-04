@@ -49,6 +49,11 @@ public class Mahasiswa {
         return this.jurusan;
     }
 
+    public String[] getMasalahIRS() {
+        cekIRS();
+        return masalahIRS;
+    }
+
     // method untuk cek apakah mata kuliah tertentu diambil oleh mahasiswa
     public boolean cekMatkulDiambil(MataKuliah mk){
         for (MataKuliah m: this.mataKuliah){
@@ -122,16 +127,6 @@ public class Mahasiswa {
             if (mk == null) break;
             else if (!(mk.getKode().equals(singkatanJurusan)) && !(mk.getKode().equals("CS"))){
                 this.masalahIRS[c-1] = (c++) + ". Mata Kuliah " + mk + " tidak dapat diambil jurusan " + singkatanJurusan;
-            }
-        }
-
-        // mengatur output sesuai permasalahan IRS
-        if (masalahIRS[0] == null) System.out.println("IRS tidak bermasalah.");
-        else {
-            // looping untuk mencetak String dalam masalahIRS
-            for (String h : this.masalahIRS) {
-                if (h == null) break;
-                System.out.println(h);
             }
         }
     }

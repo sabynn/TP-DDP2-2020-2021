@@ -110,8 +110,19 @@ public class SistemAkademik {
         
         System.out.println("Hasil Pengecekan IRS:");
 
-        // melakukan pengecekan IRS dengan memanggil method cekIRS jika mahasiswa sudah ambil mata kuliah
-        if (adaMatkul) m.cekIRS();
+        // melakukan pengecekan IRS dengan memanggil method getMasalahIRS jika mahasiswa sudah ambil mata kuliah
+        if (adaMatkul) {
+            String[] masalah = m.getMasalahIRS();
+            // mengatur output sesuai permasalahan IRS
+            if (masalah[0] == null) System.out.println("IRS tidak bermasalah.");
+            else {
+                // looping untuk mencetak String dalam Arrays masalah
+                for (String h : masalah) {
+                    if (h == null) break;
+                    System.out.println(h);
+                }
+            }
+        }
         else System.out.println("IRS tidak bermasalah.");
     }
 
