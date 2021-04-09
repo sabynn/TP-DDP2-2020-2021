@@ -117,7 +117,7 @@ public class Mahasiswa {
         // counter untuk mengatur index Arrays masalahIRS
         int c = 1;
 
-        // penambahan String ke masalahIRS jika  sks melebihi 24
+        // penambahan String ke masalahIRS jika sks melebihi 24
         if (totalSKS > 24) {
             this.masalahIRS[c-1] = (c++) + ". SKS yang Anda ambil lebih dari 24";
         }

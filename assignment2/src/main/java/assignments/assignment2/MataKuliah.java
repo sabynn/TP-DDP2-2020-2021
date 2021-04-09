@@ -9,7 +9,7 @@ public class MataKuliah {
     private int jumlahMahasiswa;
 
     public MataKuliah(String kode, String nama, int sks, int kapasitas){
-        // constructor untuk inisiasi atribut nama dan npm mahasiswa
+        // constructor untuk inisiasi atribut MataKuliah
         this.kode = kode;
         this.nama = nama;
         this.sks = sks;
@@ -17,7 +17,7 @@ public class MataKuliah {
         this.daftarMahasiswa = new Mahasiswa[kapasitas];
     }
 
-    // getter untuk mengembalikan nilai dari atribut Mahasiswa
+    // getter untuk mengembalikan nilai dari atribut MataKuliah
     public String getKode(){
         return this.kode;
     }
@@ -53,7 +53,7 @@ public class MataKuliah {
                 temp[c++] = m;
             }
         }
-        // mengubah reference Arrays mataKuliah ke temp
+        // mengubah reference Arrays daftarMahasiswa ke temp
         this.daftarMahasiswa = temp;
         // mengurangi nilai jumlahMahasiswa
         this.jumlahMahasiswa--;
