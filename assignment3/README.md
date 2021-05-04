@@ -1,4 +1,4 @@
-# Tugas Pemrograman 3: Kehidupan di Fasilkom
+# Tugas Pemrograman 3: Kehidupan Fasilkom
 
 CSGE601021 Dasar-Dasar Pemrograman 2 @ Fakultas Ilmu Komputer Universitas Indonesia,
 Semester Genap 2020/2021
@@ -110,5 +110,5 @@ Pipelines.
 
 ***Selamat Mengerjakan!***
 
-[dokumen tp3]: https://docs.google.com/document/d/1aCGF0x41lqrIR9JkINpXMV9Vxt8GfdC9NLtVSvrJ2rM/export?format=pdf&attachment=false
+[dokumen tp3]: https://docs.google.com/document/d/15TqHsWyRtdkEaURI4A-kW90Ms0M4q6l1W6bkbgFv1VA/export?format=pdf&attachment=false
 [root-readme]: ../README.md#memulai
