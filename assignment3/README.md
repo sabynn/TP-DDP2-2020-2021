@@ -82,7 +82,7 @@ src\main\java> java assignments.assignment3.Main
 
 ## Pengumpulan
 Simpan pekerjaan kamu, lalu lakukan `add`, `commit`, dan `push` dengan Git.
-*Push* solusi kamu **sebelum 18 Mei 2020 pukul 23.55**. Disarankan untuk
+*Push* solusi kamu **sebelum 18 Mei 2021 pukul 23.55**. Disarankan untuk
 *push* **sebelum pukul 22.00** untuk mengantisipasi antrean pada GitLab
 Pipelines.
 
