@@ -101,7 +101,7 @@ class Mahasiswa extends ElemenFasilkom {
     // method untuk mengembalikan nama jurusan sesuai kode jurusan mahasiswa
     public String extractJurusan(long npm) {
         /* TODO: implementasikan kode Anda di sini */
-        int kodeJurusan = (int) (this.npm / 10E+9) % 100;
+        int kodeJurusan = (int) (npm / 10E+9) % 100;
         if (kodeJurusan == 1) this.jurusan = "Ilmu Komputer";
         else if (kodeJurusan == 2) this.jurusan = "Sistem Informasi";
         return this.jurusan;
