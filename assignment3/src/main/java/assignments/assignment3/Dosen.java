@@ -29,7 +29,7 @@ class Dosen extends ElemenFasilkom {
     public void dropMataKuliah() {
         // handle jika dosen tidak mengajar matkul apapun
         if (this.mataKuliah == null){
-            System.out.printf("%s sedang tidak mengajar mata kuliah apapun\n", this);
+            System.out.printf("[DITOLAK] %s sedang tidak mengajar mata kuliah apapun\n", this);
         }
         // melepaskan mata kuliah yang diajarkan dosen dan mencetak output
         else{
