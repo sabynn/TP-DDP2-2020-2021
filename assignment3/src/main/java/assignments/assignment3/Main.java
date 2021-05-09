@@ -8,9 +8,9 @@ public class Main {
 
     // data field Main
 
-    private static ElemenFasilkom[] daftarElemenFasilkom = new ElemenFasilkom[100];
+    private static final ElemenFasilkom[] daftarElemenFasilkom = new ElemenFasilkom[100];
 
-    private static MataKuliah[] daftarMataKuliah = new MataKuliah[100];
+    private static final MataKuliah[] daftarMataKuliah = new MataKuliah[100];
 
     private static int totalMataKuliah = 0;
 
@@ -255,8 +255,7 @@ public class Main {
 
     private static void friendshipRanking() {
         // sort Arrays berdasarkan friendship tertinggi hingga rendah,jika friendship sama diurutkan secara alphabetical
-        Arrays.sort(daftarElemenFasilkom,
-                Comparator.nullsLast(((Comparator.comparing(ElemenFasilkom::getFriendship))
+        Arrays.sort(daftarElemenFasilkom, Comparator.nullsLast(((Comparator.comparing(ElemenFasilkom::getFriendship))
                 .reversed())
                 .thenComparing(ElemenFasilkom::toString)));
 
