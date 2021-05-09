@@ -50,7 +50,7 @@ class Mahasiswa extends ElemenFasilkom {
         }
         // handle output jika kapasitas matkul sudah penuh
         else if (mataKuliah.getJumlahMahasiswa() == mataKuliah.getKapasitas()) {
-            System.out.println("[DITOLAK] " + mataKuliah + " telah penuh kapasitasnya.");
+            System.out.println("[DITOLAK] " + mataKuliah + " telah penuh kapasitasnya");
         }
         else {
             // menambahkan matkul ke Array mataKuliah dan menambahkan nilai jumlahMatkul
