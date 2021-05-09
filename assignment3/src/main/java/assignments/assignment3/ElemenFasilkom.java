@@ -10,11 +10,7 @@ abstract class ElemenFasilkom {
 
     private ElemenFasilkom[] telahMenyapa = new ElemenFasilkom[100];
 
-    private ElemenKantin[] telahMembeliMakanan = new ElemenKantin[100];
-
     private int jumlahTelahDisapa;
-
-    private int jumlahTelahDibeli;
 
     // constructor ElemenFasilkom
     ElemenFasilkom(String tipe, String nama) {
@@ -34,12 +30,6 @@ abstract class ElemenFasilkom {
     public int getJumlahTelahDisapa() {
         return jumlahTelahDisapa;
     }
-
-    public int getJumlahTelahDibeli() {
-        return jumlahTelahDibeli;
-    }
-
-    public ElemenKantin[] getTelahMembeliMakanan() { return telahMembeliMakanan; }
 
     // setter friendship
     public void setFriendship(int newFriendship){
@@ -77,10 +67,8 @@ abstract class ElemenFasilkom {
     public void resetMenyapa() {
         // menghapus daftar orang yang telah disapa dan menghapus daftar elemenKantin yang makanannya telah dibeli
         telahMenyapa = new ElemenFasilkom[100];
-        telahMembeliMakanan = new ElemenKantin[100];
         // mereset jumlah orang yang telah disapa dan jumlah elemenKantin yang makanannya telah dibeli
         jumlahTelahDisapa = 0;
-        jumlahTelahDibeli = 0;
     }
 
     public void membeliMakanan(ElemenFasilkom pembeli, ElemenFasilkom penjual, String namaMakanan) {
@@ -89,9 +77,10 @@ abstract class ElemenFasilkom {
         // mendapatkan object Makanan
         Makanan makanan = p.getMakanan(namaMakanan);
         if (makanan != null){
-            // menambahkan elemenKantin ke daftar elemenKantin yang makanannya telah dibeli dan mencetak output
-            telahMembeliMakanan[jumlahTelahDibeli++] = p;
+            // cetak output sesuai format serta menambah friendship dari pembeli dan penjual sebesar 1
             System.out.printf("%s berhasil membeli %s seharga %d\n", pembeli, makanan, makanan.getHarga());
+            pembeli.friendship++;
+            penjual.friendship++;
         }else{
             // handle output jika penjual tidak menjual makanan
             System.out.printf("[DITOLAK] %s tidak menjual %s\n", penjual, namaMakanan);

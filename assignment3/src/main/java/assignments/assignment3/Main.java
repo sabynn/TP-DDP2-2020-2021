@@ -1,6 +1,5 @@
 package assignments.assignment3;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
 import java.util.Arrays;
@@ -113,7 +112,6 @@ public class Main {
             MataKuliah matkul = getMataKuliah(namaMataKuliah);
             // casting untuk mengubah ElemenFasilkom menjadi Mahasiswa  dan memanggil method addMatkul
             ((Mahasiswa) elemen).addMatkul(matkul);
-
         }
         // handle jika ElemenFasilkom bukan Mahasiswa
         else{
@@ -236,19 +234,6 @@ public class Main {
                     }
                 }
 
-                // cek apakah ElemenFasilkom pernah membeli Makanan
-                if (elemen.getJumlahTelahDibeli() != 0){
-                    // looping Arrays telahMembeliMakanan milik ElemenFasilkom
-                    for (ElemenKantin ek: elemen.getTelahMembeliMakanan()){
-                        if (ek == null) break;
-                        else {
-                            // menambah friendship dari ElemenFasilkom dan ElemenKantin sebesar 1
-                            elemen.setFriendship(elemen.getFriendship() + 1);
-                            ek.setFriendship(ek.getFriendship() + 1);
-                        }
-                    }
-                }
-
                 // cek apakah ElemenFasilkom menyapa lebih dari setengah total elemenFasilkom(tdk termasuk diri sendiri)
                 if (elemen.getJumlahTelahDisapa() >= (totalElemenFasilkom-1)/2){
                     // menambah friendship ElemenFasilkom sebesar 10
@@ -257,7 +242,7 @@ public class Main {
                     // mengurangi friendship ElemenFasilkom sebesar 5
                     elemen.setFriendship(elemen.getFriendship() - 5);
                 }
-                // reset terhadap Array telahMenyapa dan telahMembeliMakanan dari ElemenFasilkom
+                // reset terhadap Array telahMenyapa dan jumlahTelahDisapa
                 elemen.resetMenyapa();
             } else{
                 break;
