@@ -212,26 +212,6 @@ public class Main {
     private static void nextDay() {
         for (ElemenFasilkom elemen: daftarElemenFasilkom){
             if(elemen != null){
-                // cek apakah elemen bertipe Mahasiswa
-                if (elemen.getTipe().equals("Mahasiswa")) {
-                    // explicit casting untuk mengubah ElemenFasilkom menjadi Mahasiswa
-                    Mahasiswa m = (Mahasiswa) elemen;
-                    // looping Arrays daftarMataKuliah milik Mahasiswa
-                    for (MataKuliah mk : m.getDaftarMataKuliah()) {
-                        if (mk == null) break;
-                        else {
-                            // mendapat Dosen pengajar MataKuliah
-                            Dosen d = mk.getDosen();
-                            // cek apakah Mahasiswa telah menyapa Dosen
-                            if (m.cekTelahDisapa(d)) {
-                                // menambah friendship dari Mahasiswa dan Dosen sebesar 2
-                                m.setFriendship(m.getFriendship() + 2);
-                                d.setFriendship(d.getFriendship() + 2);
-                            }
-                        }
-                    }
-                }
-
                 // cek apakah ElemenFasilkom menyapa lebih dari setengah total elemenFasilkom(tdk termasuk diri sendiri)
                 if (elemen.getJumlahTelahDisapa() >= (totalElemenFasilkom-1)/2){
                     // menambah friendship ElemenFasilkom sebesar 10

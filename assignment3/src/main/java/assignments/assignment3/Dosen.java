@@ -5,8 +5,13 @@ class Dosen extends ElemenFasilkom {
     private MataKuliah mataKuliah;
 
     // constructor Dosen
-    Dosen(String nama) {
+    public Dosen(String nama) {
         super("Dosen", nama);
+    }
+
+    // getter
+    public MataKuliah getMataKuliah() {
+        return mataKuliah;
     }
 
     public void mengajarMataKuliah(MataKuliah mataKuliah) {

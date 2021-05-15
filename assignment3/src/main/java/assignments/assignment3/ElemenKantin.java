@@ -6,7 +6,7 @@ class ElemenKantin extends ElemenFasilkom {
 
     private int jumlahMakanan;
 
-    ElemenKantin(String nama) {
+    public ElemenKantin(String nama) {
         // constructor ElemenKantin
         super("ElemenKantin", nama);
     }

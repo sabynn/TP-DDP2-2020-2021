@@ -32,7 +32,7 @@ class Mahasiswa extends ElemenFasilkom {
     }
 
     // method untuk cek apakah mata kuliah tertentu diambil oleh mahasiswa
-    public boolean cekMatkulDiambil(MataKuliah mk){
+    private boolean cekMatkulDiambil(MataKuliah mk){
         for (MataKuliah m: this.daftarMataKuliah){
             if (mk.equals(m)) {
                 return true;

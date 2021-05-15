@@ -1,5 +1,7 @@
 package assignments.assignment3;
 
+import java.util.Arrays;
+
 abstract class ElemenFasilkom {
     // data fields ElemenFasilkom
     private String tipe;
@@ -44,11 +46,30 @@ abstract class ElemenFasilkom {
     }
 
     // method untuk cek apakah elemenFasilkom tertentu sudah disapa sebelumnya
-    public boolean cekTelahDisapa(ElemenFasilkom elemen){
+    private boolean cekTelahDisapa(ElemenFasilkom elemen){
         for (ElemenFasilkom ef : telahMenyapa) {
             if (ef==null) break;
             else if (ef.equals(elemen)) return true;
         }
+        return false;
+    }
+
+    //
+    private boolean cekMahasiswaDanDosen(ElemenFasilkom e){
+        // cek Mahasiswa menyapa Dosen
+        if (this.getTipe().equals("Mahasiswa") && e.getTipe().equals("Dosen")) {
+            if (((Dosen) e).getMataKuliah() != null){
+                // cek apakah Dosen mengajar MataKuliah yang diambil Mahasiswa
+                return Arrays.asList((((Mahasiswa) this).getDaftarMataKuliah())).contains(((Dosen) e).getMataKuliah());
+            }
+        }// cek Dosen menyapa Mahasiswa
+        else if (this.getTipe().equals("Dosen") && e.getTipe().equals("Mahasiswa")) {
+            if (((Dosen) this).getMataKuliah() != null) {
+                // cek apakah Dosen mengajar MataKuliah yang diambil Mahasiswa
+                return Arrays.asList((((Mahasiswa) e).getDaftarMataKuliah())).contains(((Dosen) this).getMataKuliah());
+            }
+        }
+        // return false jika ElemenFasilkom yang saling menyapa bukan Mahasiswa dan Dosen
         return false;
     }
 
@@ -58,6 +79,13 @@ abstract class ElemenFasilkom {
             telahMenyapa[jumlahTelahDisapa++] = elemenFasilkom;
             elemenFasilkom.telahMenyapa[elemenFasilkom.jumlahTelahDisapa++] = this;
             System.out.println(this.nama + " menyapa dengan " + elemenFasilkom);
+
+            // menambah friendship dari Mahasiswa dan Dosen yang terhubung matkul yang sama jika saling menyapa
+            if (this.cekTelahDisapa(elemenFasilkom) && this.cekMahasiswaDanDosen(elemenFasilkom)){
+                this.friendship += 2;
+                elemenFasilkom.friendship += 2;
+            }
+
         } else {
             // handle jika elemenFasilkom tertentu sudah disapa sebelumnya
             System.out.println("[DITOLAK] " + this.nama + " telah menyapa " + elemenFasilkom + " hari ini");

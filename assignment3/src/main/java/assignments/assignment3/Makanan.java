@@ -18,7 +18,7 @@ class Makanan {
     }
 
     public String toString() {
-        // mengembalikan
+        // mengembalikan nama makanan
         return this.nama;
     }
 }
