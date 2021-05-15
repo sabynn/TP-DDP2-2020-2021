@@ -54,7 +54,6 @@ abstract class ElemenFasilkom {
         return false;
     }
 
-    //
     private boolean cekMahasiswaDanDosen(ElemenFasilkom e){
         // cek Mahasiswa menyapa Dosen
         if (this.getTipe().equals("Mahasiswa") && e.getTipe().equals("Dosen")) {
