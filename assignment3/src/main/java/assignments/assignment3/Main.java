@@ -5,9 +5,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Main {
-
-    // data field Main
-
+    // data fields Main
     private static final ElemenFasilkom[] daftarElemenFasilkom = new ElemenFasilkom[100];
 
     private static final MataKuliah[] daftarMataKuliah = new MataKuliah[100];
@@ -227,7 +225,7 @@ public class Main {
                             // cek apakah Mahasiswa telah menyapa Dosen
                             if (m.cekTelahDisapa(d)) {
                                 // menambah friendship dari Mahasiswa dan Dosen sebesar 2
-                                elemen.setFriendship(elemen.getFriendship() + 2);
+                                m.setFriendship(m.getFriendship() + 2);
                                 d.setFriendship(d.getFriendship() + 2);
                             }
                         }

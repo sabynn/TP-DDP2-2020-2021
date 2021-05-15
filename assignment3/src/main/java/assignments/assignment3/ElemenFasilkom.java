@@ -13,7 +13,7 @@ abstract class ElemenFasilkom {
     private int jumlahTelahDisapa;
 
     // constructor ElemenFasilkom
-    ElemenFasilkom(String tipe, String nama) {
+    public ElemenFasilkom(String tipe, String nama) {
         this.tipe = tipe;
         this.nama = nama;
     }
@@ -72,7 +72,7 @@ abstract class ElemenFasilkom {
     }
 
     public void membeliMakanan(ElemenFasilkom pembeli, ElemenFasilkom penjual, String namaMakanan) {
-        // explicit casting untuk mengubah pejual dari ElemenFasilkom menjadi ElemenKantin
+        // explicit casting untuk mengubah penjual dari ElemenFasilkom menjadi ElemenKantin
         ElemenKantin p = (ElemenKantin) penjual;
         // mendapatkan object Makanan
         Makanan makanan = p.getMakanan(namaMakanan);

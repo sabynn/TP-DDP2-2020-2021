@@ -1,9 +1,7 @@
 package assignments.assignment3;
 
 class Mahasiswa extends ElemenFasilkom {
-    
-    /* TODO: Silahkan menambahkan visibility pada setiap method dan variabel apabila diperlukan */
-
+    // data fields Mahasiswa
     private MataKuliah[] daftarMataKuliah = new MataKuliah[10];
 
     private long npm;
@@ -14,7 +12,7 @@ class Mahasiswa extends ElemenFasilkom {
 
     private int jumlahMatkul;
 
-    Mahasiswa(String nama, long npm) {
+    public Mahasiswa(String nama, long npm) {
         /* TODO: implementasikan kode Anda di sini */
         super("Mahasiswa", nama);
         this.npm = npm;
@@ -100,7 +98,6 @@ class Mahasiswa extends ElemenFasilkom {
 
     // method untuk mengembalikan nama jurusan sesuai kode jurusan mahasiswa
     public String extractJurusan(long npm) {
-        /* TODO: implementasikan kode Anda di sini */
         int kodeJurusan = (int) (npm / 10E+9) % 100;
         if (kodeJurusan == 1) this.jurusan = "Ilmu Komputer";
         else if (kodeJurusan == 2) this.jurusan = "Sistem Informasi";

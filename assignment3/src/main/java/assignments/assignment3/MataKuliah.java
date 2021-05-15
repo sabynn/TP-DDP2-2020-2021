@@ -13,7 +13,7 @@ class MataKuliah {
     private int jumlahMahasiswa;
 
     // constructor MataKuliah
-    MataKuliah(String nama, int kapasitas) {
+    public MataKuliah(String nama, int kapasitas) {
         this.nama = nama;
         this.kapasitas = kapasitas;
         this.daftarMahasiswa = new Mahasiswa[kapasitas];
