@@ -60,7 +60,6 @@ class Mahasiswa extends ElemenFasilkom {
     }
 
     public void dropMatkul(MataKuliah mataKuliah) {
-        /* TODO: implementasikan kode Anda di sini */
         if (this.cekMatkulDiambil(mataKuliah)){
             MataKuliah[] temp = new MataKuliah[10];
             int c = 0;
