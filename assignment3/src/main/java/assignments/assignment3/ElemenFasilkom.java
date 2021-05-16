@@ -84,7 +84,6 @@ abstract class ElemenFasilkom {
                 this.friendship += 2;
                 elemenFasilkom.friendship += 2;
             }
-
         } else {
             // handle jika elemenFasilkom tertentu sudah disapa sebelumnya
             System.out.println("[DITOLAK] " + this.nama + " telah menyapa " + elemenFasilkom + " hari ini");
@@ -92,9 +91,9 @@ abstract class ElemenFasilkom {
     }
 
     public void resetMenyapa() {
-        // menghapus daftar orang yang telah disapa dan menghapus daftar elemenKantin yang makanannya telah dibeli
+        // menghapus daftar orang yang telah disapa
         telahMenyapa = new ElemenFasilkom[100];
-        // mereset jumlah orang yang telah disapa dan jumlah elemenKantin yang makanannya telah dibeli
+        // mereset jumlah orang yang telah disapa
         jumlahTelahDisapa = 0;
     }
 
