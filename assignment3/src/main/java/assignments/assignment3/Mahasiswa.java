@@ -12,8 +12,8 @@ class Mahasiswa extends ElemenFasilkom {
 
     private int jumlahMatkul;
 
+    // constructor Mahasiswa
     public Mahasiswa(String nama, long npm) {
-        /* TODO: implementasikan kode Anda di sini */
         super("Mahasiswa", nama);
         this.npm = npm;
     }
