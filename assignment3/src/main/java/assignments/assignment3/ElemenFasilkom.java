@@ -5,13 +5,9 @@ import java.util.Arrays;
 abstract class ElemenFasilkom {
     // data fields ElemenFasilkom
     private String tipe;
-    
     private String nama;
-
     private int friendship;
-
     private ElemenFasilkom[] telahMenyapa = new ElemenFasilkom[100];
-
     private int jumlahTelahDisapa;
 
     // constructor ElemenFasilkom
@@ -35,7 +31,7 @@ abstract class ElemenFasilkom {
 
     // setter friendship
     public void setFriendship(int newFriendship){
-        // memastikan friendship bernilain antara 0-100
+        // memastikan friendship bernilai antara 0-100
         if (newFriendship > 100){
             this.friendship = 100;
         } else if (newFriendship < 0){

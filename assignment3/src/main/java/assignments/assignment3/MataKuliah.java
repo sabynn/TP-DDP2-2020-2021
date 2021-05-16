@@ -3,13 +3,9 @@ package assignments.assignment3;
 class MataKuliah {
     // data fields MataKuliah
     private String nama;
-
     private int kapasitas;
-
     private Dosen dosen;
-
     private Mahasiswa[] daftarMahasiswa;
-
     private int jumlahMahasiswa;
 
     // constructor MataKuliah

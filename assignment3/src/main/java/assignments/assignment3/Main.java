@@ -7,11 +7,8 @@ import java.util.Arrays;
 public class Main {
     // data fields Main
     private static final ElemenFasilkom[] daftarElemenFasilkom = new ElemenFasilkom[100];
-
     private static final MataKuliah[] daftarMataKuliah = new MataKuliah[100];
-
     private static int totalMataKuliah = 0;
-
     private static int totalElemenFasilkom = 0;
 
     private static ElemenFasilkom getElemenFasilkom(String namaElemen){
