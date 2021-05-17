@@ -209,7 +209,7 @@ public class Main {
     private static void nextDay() {
         for (ElemenFasilkom elemen: daftarElemenFasilkom){
             if(elemen != null){
-                // cek apakah ElemenFasilkom menyapa lebih dari setengah total elemenFasilkom(tdk termasuk diri sendiri)
+                // cek apakah ElemenFasilkom menyapa >= setengah total elemenFasilkom(tdk termasuk diri sendiri)
                 if (elemen.getJumlahTelahDisapa() >= (totalElemenFasilkom-1)/2){
                     // menambah friendship ElemenFasilkom sebesar 10
                     elemen.setFriendship(elemen.getFriendship() + 10);
