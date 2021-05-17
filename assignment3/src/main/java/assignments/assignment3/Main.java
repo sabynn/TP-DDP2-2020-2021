@@ -112,7 +112,6 @@ public class Main {
         else{
             System.out.println("[DITOLAK] Hanya mahasiswa yang dapat menambahkan matkul");
         }
-
     }
 
     private static void dropMatkul(String objek, String namaMataKuliah) {
