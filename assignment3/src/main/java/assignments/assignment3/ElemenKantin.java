@@ -24,7 +24,7 @@ public class ElemenKantin extends ElemenFasilkom {
         if (getMakanan(nama) != null){
             System.out.printf("[DITOLAK] %s sudah pernah terdaftar\n", nama);
         } else {
-            //membuat objek Makanan dengan parameter nama dan harga dan memasukkan ke dalam daftarMakanan
+            // membuat objek Makanan dengan parameter nama dan harga dan memasukkan ke dalam daftarMakanan
             daftarMakanan[jumlahMakanan++] = new Makanan(nama, harga);
             System.out.printf("%s telah mendaftarkan makanan %s dengan harga %d\n", this, nama, harga);
         }

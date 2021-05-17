@@ -77,8 +77,8 @@ public abstract class ElemenFasilkom {
 
             // menambah friendship dari Mahasiswa dan Dosen yang terhubung matkul yang sama jika saling menyapa
             if (this.cekMahasiswaDanDosen(elemenFasilkom)){
-                this.friendship += 2;
-                elemenFasilkom.friendship += 2;
+                this.setFriendship(this.friendship + 2);
+                elemenFasilkom.setFriendship(elemenFasilkom.friendship + 2);
             }
         } else {
             // handle jika elemenFasilkom tertentu sudah disapa sebelumnya
@@ -101,8 +101,8 @@ public abstract class ElemenFasilkom {
         if (makanan != null){
             // cetak output sesuai format serta menambah friendship dari pembeli dan penjual sebesar 1
             System.out.printf("%s berhasil membeli %s seharga %d\n", pembeli, makanan, makanan.getHarga());
-            pembeli.friendship++;
-            penjual.friendship++;
+            pembeli.setFriendship(pembeli.friendship + 1);
+            penjual.setFriendship(penjual.friendship + 1);
         }else{
             // handle output jika penjual tidak menjual makanan
             System.out.printf("[DITOLAK] %s tidak menjual %s\n", penjual, namaMakanan);
