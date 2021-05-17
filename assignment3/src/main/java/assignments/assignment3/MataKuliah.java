@@ -1,6 +1,6 @@
 package assignments.assignment3;
 
-class MataKuliah {
+public class MataKuliah {
     // data fields MataKuliah
     private String nama;
     private int kapasitas;

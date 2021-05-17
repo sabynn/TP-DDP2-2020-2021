@@ -1,6 +1,6 @@
 package assignments.assignment3;
 
-class ElemenKantin extends ElemenFasilkom {
+public class ElemenKantin extends ElemenFasilkom {
     // data fields ElemenKantin
     private Makanan[] daftarMakanan = new Makanan[10];
     private int jumlahMakanan;

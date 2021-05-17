@@ -1,6 +1,6 @@
 package assignments.assignment3;
 
-class Mahasiswa extends ElemenFasilkom {
+public class Mahasiswa extends ElemenFasilkom {
     // data fields Mahasiswa
     private MataKuliah[] daftarMataKuliah = new MataKuliah[10];
     private long npm;

@@ -1,6 +1,6 @@
 package assignments.assignment3;
 
-class Makanan {
+public class Makanan {
     // data fields Makanan
     private String nama;
     private long harga;

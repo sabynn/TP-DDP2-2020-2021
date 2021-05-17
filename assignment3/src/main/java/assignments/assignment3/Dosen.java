@@ -1,6 +1,6 @@
 package assignments.assignment3;
 
-class Dosen extends ElemenFasilkom {
+public class Dosen extends ElemenFasilkom {
     // data field Dosen
     private MataKuliah mataKuliah;
 

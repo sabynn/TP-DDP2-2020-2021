@@ -2,7 +2,7 @@ package assignments.assignment3;
 
 import java.util.Arrays;
 
-abstract class ElemenFasilkom {
+public abstract class ElemenFasilkom {
     // data fields ElemenFasilkom
     private String tipe;
     private String nama;
@@ -76,7 +76,7 @@ abstract class ElemenFasilkom {
             System.out.println(this.nama + " menyapa dengan " + elemenFasilkom);
 
             // menambah friendship dari Mahasiswa dan Dosen yang terhubung matkul yang sama jika saling menyapa
-            if (this.cekTelahDisapa(elemenFasilkom) && this.cekMahasiswaDanDosen(elemenFasilkom)){
+            if (this.cekMahasiswaDanDosen(elemenFasilkom)){
                 this.friendship += 2;
                 elemenFasilkom.friendship += 2;
             }
