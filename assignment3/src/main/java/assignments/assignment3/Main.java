@@ -213,7 +213,7 @@ public class Main {
         for (ElemenFasilkom elemen: daftarElemenFasilkom){
             if(elemen != null){
                 // cek apakah ElemenFasilkom menyapa >= setengah total elemenFasilkom(tdk termasuk diri sendiri)
-                if (elemen.getJumlahTelahDisapa() >= (totalElemenFasilkom-1)/2.0){
+                if (elemen.getJumlahTelahDisapa() >= Math.round((totalElemenFasilkom-1)/2.0)){
                     // menambah friendship ElemenFasilkom sebesar 10
                     elemen.setFriendship(elemen.getFriendship() + 10);
                 }else{
