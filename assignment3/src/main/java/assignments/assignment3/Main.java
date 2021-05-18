@@ -32,19 +32,19 @@ public class Main {
     }
 
     private static void addMahasiswa(String nama, long npm) {
-        // membuat objek Mahasiswa dan menambahkan objek  ke dalam daftarElemenFasilkom
+        // membuat objek Mahasiswa dan menambahkan objek ke dalam daftarElemenFasilkom
         daftarElemenFasilkom[totalElemenFasilkom++] = new Mahasiswa(nama, npm);
         System.out.println(nama + " berhasil ditambahkan");
     }
 
     private static void addDosen(String nama) {
-        // membuat objek Dosen dan menambahkan objek  ke dalam daftarElemenFasilkom
+        // membuat objek Dosen dan menambahkan objek ke dalam daftarElemenFasilkom
         daftarElemenFasilkom[totalElemenFasilkom++] = new Dosen(nama);
         System.out.println(nama + " berhasil ditambahkan");
     }
 
     private static void addElemenKantin(String nama) {
-        // membuat objek ElemenKantin dan menambahkan objek  ke dalam daftarElemenFasilkom
+        // membuat objek ElemenKantin dan menambahkan objek ke dalam daftarElemenFasilkom
         daftarElemenFasilkom[totalElemenFasilkom++] = new ElemenKantin(nama);
         System.out.println(nama + " berhasil ditambahkan");
     }
@@ -102,6 +102,7 @@ public class Main {
     private static void addMatkul(String objek, String namaMataKuliah) {
         // mendapatkan objek ElemenFasilkom sesuai nama objek
         ElemenFasilkom elemen = getElemenFasilkom(objek);
+
         if (elemen.getTipe().equals("Mahasiswa")){
             // mendapatkan objek MataKuliah sesuai namaMataKuliah
             MataKuliah matkul = getMataKuliah(namaMataKuliah);
@@ -117,6 +118,7 @@ public class Main {
     private static void dropMatkul(String objek, String namaMataKuliah) {
         // mendapatkan objek ElemenFasilkom sesuai nama objek
         ElemenFasilkom elemen = getElemenFasilkom(objek);
+
         if (elemen.getTipe().equals("Mahasiswa")){
             // mendapatkan objek MataKuliah sesuai namaMataKuliah
             MataKuliah matkul = getMataKuliah(namaMataKuliah);
@@ -132,6 +134,7 @@ public class Main {
     private static void mengajarMatkul(String objek, String namaMataKuliah) {
         // mendapatkan objek ElemenFasilkom sesuai nama objek
         ElemenFasilkom elemen = getElemenFasilkom(objek);
+
         if (elemen.getTipe().equals("Dosen")){
             // mendapatkan objek MataKuliah sesuai namaMataKuliah
             MataKuliah matkul = getMataKuliah(namaMataKuliah);
@@ -147,6 +150,7 @@ public class Main {
     private static void berhentiMengajar(String objek) {
         // mendapatkan objek ElemenFasilkom sesuai nama objek
         ElemenFasilkom elemen = getElemenFasilkom(objek);
+
         if (elemen.getTipe().equals("Dosen")){
             // casting untuk mengubah ElemenFasilkom menjadi Dosen dan memanggil method dropMataKuliah
             ((Dosen) elemen).dropMataKuliah();
