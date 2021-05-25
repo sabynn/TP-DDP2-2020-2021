@@ -55,7 +55,7 @@ public class RingkasanMataKuliahGUI extends JPanel{
                     JScrollPane scrollPane = new JScrollPane(panel);
                     scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
                     scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-                    scrollPane.getVerticalScrollBar().setBackground(SistemAkademikGUI.blueColor);
+                    scrollPane.getVerticalScrollBar().setBackground(SistemAkademikGUI.pinkColorBg);
 
                     cl.addLayoutComponent(scrollPane, "mk");
                     cp.add(scrollPane);
@@ -83,7 +83,7 @@ public class RingkasanMataKuliahGUI extends JPanel{
         this.add(Box.createRigidArea(new Dimension(0, 5)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(new Color(154, 207, 255));
+        this.setBackground(SistemAkademikGUI.pinkColorBg);
     }
 
     private MataKuliah getMataKuliah(String nama) {

@@ -85,7 +85,7 @@ public class HapusIRSGUI extends JPanel {
         this.add(Box.createRigidArea(new Dimension(0, 5)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(SistemAkademikGUI.blueColor);
+        this.setBackground(SistemAkademikGUI.pinkColorBg);
     }
 
 

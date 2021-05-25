@@ -22,6 +22,7 @@ class SistemAkademikGUI extends JFrame{
     public static Font fontTitle = new Font("Century Gothic", Font.BOLD, 20);
     public static Color blueColor = new Color(154, 207, 255);
     public static Color pinkColor = new Color(246, 172, 189);
+    public static Color pinkColorBg = new Color(246, 196, 207);
 
     public SistemAkademikGUI(){
         // Membuat Frame

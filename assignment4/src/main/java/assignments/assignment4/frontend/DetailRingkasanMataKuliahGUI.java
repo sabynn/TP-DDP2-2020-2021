@@ -38,7 +38,7 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
         label.setFont(new Font("Century Gothic", Font.BOLD , 12));
-        label.setForeground(SistemAkademikGUI.blueColor);
+        label.setForeground(SistemAkademikGUI.pinkColor);
         label.setBackground(Color.WHITE);
         label.setOpaque(true);
 
@@ -50,7 +50,7 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
         btnBack.setFont(SistemAkademikGUI.fontGeneral);
         btnBack.setFocusPainted(false);
         btnBack.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        btnBack.setForeground(SistemAkademikGUI.blueColor);
+        btnBack.setForeground(SistemAkademikGUI.pinkColor);
         btnBack.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Container c = frame.getContentPane();
@@ -68,7 +68,7 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
         this.add(Box.createRigidArea(new Dimension(0, 40)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(SistemAkademikGUI.blueColor);
+        this.setBackground(SistemAkademikGUI.pinkColorBg);
         
     }
 }

@@ -103,7 +103,7 @@ public class TambahMataKuliahGUI extends JPanel{
         this.add(Box.createRigidArea(new Dimension(0, 5)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(SistemAkademikGUI.blueColor);
+        this.setBackground(SistemAkademikGUI.pinkColorBg);
     }
 
     // cek apakah mata kuliah dengan nama tertentu telah terdaftar
