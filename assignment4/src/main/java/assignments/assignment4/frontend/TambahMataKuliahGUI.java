@@ -69,16 +69,14 @@ public class TambahMataKuliahGUI extends JPanel{
                 }
                 // menampilkan pesan sesuai kondisi
                 JOptionPane.showMessageDialog(frame, text);
+                clearTheField(fieldKode, fieldNama, fieldSKS, fieldKapasitas);
             }
         });
 
         // ActionEvent Button btnBack untuk kembali ke HomeGUI
         btnBack.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                fieldKode.setText("");
-                fieldNama.setText("");
-                fieldSKS.setText("");
-                fieldKapasitas.setText("");
+                clearTheField(fieldKode, fieldNama, fieldSKS, fieldKapasitas);
                 Container c = frame.getContentPane();
                 CardLayout cl = (CardLayout) c.getLayout();
                 cl.show(c, "homepage");
@@ -107,12 +105,20 @@ public class TambahMataKuliahGUI extends JPanel{
     }
 
     // cek apakah mata kuliah dengan nama tertentu telah terdaftar
-    public boolean cekMataKuliah(ArrayList<MataKuliah> daftarMataKuliah, String namaMatkul){
+    protected boolean cekMataKuliah(ArrayList<MataKuliah> daftarMataKuliah, String namaMatkul){
         for (MataKuliah matkul: daftarMataKuliah){
             if (matkul.getNama().equals(namaMatkul)){
                 return true;
             }
         }
         return false;
+    }
+
+    // mengosongkan semua field
+    private void clearTheField(JTextField a, JTextField b, JTextField c, JTextField d){
+        a.setText("");
+        b.setText("");
+        c.setText("");
+        d.setText("");
     }
 }

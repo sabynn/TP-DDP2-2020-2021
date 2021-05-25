@@ -53,14 +53,14 @@ public class TambahMahasiswaGUI extends JPanel{
                     text = String.format("Mahasiswa %s-%s berhasil ditambahkan", stringNpm, nama);
                 }
                 JOptionPane.showMessageDialog(frame, text);
+                clearTheField(fieldNama,fieldNPM);
             }
         });
 
         // ActionEvent btnBack untuk kembali ke HomeGUI
         btnBack.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                fieldNama.setText("");
-                fieldNPM.setText("");
+                clearTheField(fieldNama,fieldNPM);
                 Container c = frame.getContentPane();
                 CardLayout cl = (CardLayout) c.getLayout();
                 cl.show(c, "homepage");
@@ -111,5 +111,10 @@ public class TambahMahasiswaGUI extends JPanel{
             }
         }
         return false;
+    }
+
+    private void clearTheField(JTextField a, JTextField b){
+        a.setText("");
+        b.setText("");
     }
 }
