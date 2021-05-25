@@ -33,10 +33,6 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
             }
         }
 
-        if (mataKuliah.getJumlahMahasiswa() >= 7){
-            frame.setSize(500, frame.getHeight()+100);
-        }
-
         // membuat dan mengatur label yang menampilkan ringkasan mahasiswa
         JLabel label = (new JLabel("<html>" + nama + kode + sks + jumlahMhs + mhs + "</html>"));
         label.setHorizontalAlignment(JLabel.CENTER);
