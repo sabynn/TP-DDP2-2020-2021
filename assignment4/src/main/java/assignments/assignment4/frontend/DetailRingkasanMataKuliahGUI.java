@@ -34,12 +34,12 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
         }
 
         // membuat dan mengatur label yang menampilkan ringkasan mahasiswa
-        JLabel label = (new JLabel("<html>" + nama + kode + sks + jumlahMhs + mhs + "</html>"));
+        JLabel label = (new JLabel("<html><br><br>" + nama + kode + sks + jumlahMhs + mhs + "<br><br></html>"));
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
         label.setFont(new Font("Century Gothic", Font.BOLD , 12));
-        label.setForeground(Color.WHITE);
-        label.setBackground(new Color(133, 30, 62));
+        label.setForeground(new Color(133, 30, 62));
+        label.setBackground(SistemAkademikGUI.pinkColorBg);
         label.setOpaque(true);
 
         // ActionEvent Button btnBack untuk kembali ke HomeGUI
@@ -50,7 +50,7 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
         btnBack.setFont(SistemAkademikGUI.fontGeneral);
         btnBack.setFocusPainted(false);
         btnBack.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        btnBack.setForeground(SistemAkademikGUI.pinkColor);
+        btnBack.setForeground(new Color(133, 30, 62));
         btnBack.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Container c = frame.getContentPane();
@@ -68,7 +68,7 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
         this.add(Box.createRigidArea(new Dimension(0, 40)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(SistemAkademikGUI.pinkColorBg);
+        this.setBackground(new Color(133, 30, 62));
         
     }
 }

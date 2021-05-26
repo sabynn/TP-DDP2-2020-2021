@@ -48,8 +48,8 @@ public class DetailRingkasanMahasiswaGUI extends JPanel{
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
         label.setFont(new Font("Century Gothic", Font.BOLD , 12));
-        label.setForeground(Color.white);
-        label.setBackground(new Color(0, 91, 150));
+        label.setForeground(new Color(0, 91, 150));
+        label.setBackground(SistemAkademikGUI.blueColor);
         label.setOpaque(true);
 
         // ActionEvent Button btnBack untuk kembali ke HomeGUI
@@ -60,7 +60,7 @@ public class DetailRingkasanMahasiswaGUI extends JPanel{
         btnBack.setFont(SistemAkademikGUI.fontGeneral);
         btnBack.setFocusPainted(false);
         btnBack.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        btnBack.setForeground(new Color(154, 207, 255));
+        btnBack.setForeground(new Color(0, 91, 150));
         btnBack.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Container c = frame.getContentPane();
@@ -79,6 +79,6 @@ public class DetailRingkasanMahasiswaGUI extends JPanel{
         this.add(Box.createRigidArea(new Dimension(0, 40)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(SistemAkademikGUI.blueColor);
+        this.setBackground(new Color(0, 91, 150));
     }
 }

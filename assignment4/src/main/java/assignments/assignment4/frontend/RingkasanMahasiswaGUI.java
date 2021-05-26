@@ -54,7 +54,7 @@ public class RingkasanMahasiswaGUI extends JPanel{
                     JScrollPane scrollPane = new JScrollPane(panel);
                     scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
                     scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-                    scrollPane.getVerticalScrollBar().setBackground(SistemAkademikGUI.blueColor);
+                    scrollPane.getVerticalScrollBar().setBackground(new Color(0, 91, 150));
 
                     cl.addLayoutComponent(scrollPane, "mhs");
                     cp.add(scrollPane);

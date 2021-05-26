@@ -54,7 +54,7 @@ public class RingkasanMataKuliahGUI extends JPanel{
                     JScrollPane scrollPane = new JScrollPane(panel);
                     scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
                     scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-                    scrollPane.getVerticalScrollBar().setBackground(SistemAkademikGUI.pinkColorBg);
+                    scrollPane.getVerticalScrollBar().setBackground(new Color(133, 30, 62));
 
                     cl.addLayoutComponent(scrollPane, "mk");
                     cp.add(scrollPane);
