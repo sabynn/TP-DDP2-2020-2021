@@ -25,7 +25,7 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
 
 
         if (mataKuliah.getJumlahMahasiswa() == 0){
-            mhs += "Belum ada mata kuliah yang diambil <br>";
+            mhs += "Belum ada mahasiswa yang mengambil mata kuliah ini <br>";
         }else {
             // looping untuk cetak nama mata kuliah yang diambil Mahasiswa
             for (int i = 0; i < mataKuliah.getJumlahMahasiswa(); i++) {
@@ -38,8 +38,8 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
         label.setFont(new Font("Century Gothic", Font.BOLD , 12));
-        label.setForeground(SistemAkademikGUI.pinkColor);
-        label.setBackground(Color.WHITE);
+        label.setForeground(Color.WHITE);
+        label.setBackground(new Color(133, 30, 62));
         label.setOpaque(true);
 
         // ActionEvent Button btnBack untuk kembali ke HomeGUI

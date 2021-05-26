@@ -3,7 +3,6 @@ package assignments.assignment4.frontend;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 import assignments.assignment4.backend.*;
@@ -37,7 +36,7 @@ public class DetailRingkasanMahasiswaGUI extends JPanel{
         mahasiswa.cekIRS();
 
         if (mahasiswa.getBanyakMasalahIRS() == 0){
-           cekIRS += "Belum ada mata kuliah yang diambil" + "<br>";
+           cekIRS += "IRS tidak bermasalah" + "<br>";
         }else {
             for (int i = 0; i < mahasiswa.getBanyakMasalahIRS(); i++) {
                 cekIRS += (i + 1) + ". " + mahasiswa.getMasalahIRS()[i] + "<br>";
@@ -49,8 +48,8 @@ public class DetailRingkasanMahasiswaGUI extends JPanel{
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
         label.setFont(new Font("Century Gothic", Font.BOLD , 12));
-        label.setForeground(SistemAkademikGUI.blueColor);
-        label.setBackground(Color.WHITE);
+        label.setForeground(Color.white);
+        label.setBackground(new Color(0, 91, 150));
         label.setOpaque(true);
 
         // ActionEvent Button btnBack untuk kembali ke HomeGUI

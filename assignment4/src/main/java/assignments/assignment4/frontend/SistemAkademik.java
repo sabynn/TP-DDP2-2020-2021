@@ -2,9 +2,7 @@ package assignments.assignment4.frontend;
 
 import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
 import java.util.ArrayList;
-import java.util.Collection;
 
 import assignments.assignment4.backend.*;
 
