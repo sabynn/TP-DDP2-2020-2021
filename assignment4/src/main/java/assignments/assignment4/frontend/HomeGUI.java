@@ -3,7 +3,11 @@ package assignments.assignment4.frontend;
 import javax.swing.JFrame;
 import java.awt.*;
 import javax.swing.*;
+import javax.tools.Tool;
 import java.awt.event.*;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import assignments.assignment4.backend.*;
@@ -49,8 +53,8 @@ public class HomeGUI {
         modifyButton(btnRingkasanMk, "pink", "ringkasanMk");
 
         // menampilkan gambar
-        ImageIcon icn = new ImageIcon((new ImageIcon(getClass().getResource("book.png"))
-                .getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
+        ImageIcon icn = new ImageIcon((Toolkit.getDefaultToolkit().getImage("./img/book.png"))
+                .getScaledInstance(200, 200, Image.SCALE_SMOOTH));
         JComponent imgLabel = new JLabel(icn);
         imgLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 

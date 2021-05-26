@@ -102,7 +102,6 @@ public class TambahMahasiswaGUI extends JPanel{
         }
     }
 
-
     // cek apakah mahasiswa dengan npm tertentu telah terdaftar
     protected boolean cekMahasiswa(ArrayList<Mahasiswa> daftarMahasiswa, long npm){
         for (Mahasiswa m: daftarMahasiswa){
