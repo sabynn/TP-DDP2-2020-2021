@@ -48,12 +48,13 @@ public class TambahMahasiswaGUI extends JPanel{
                     text = "Mohon isi seluruh field";
                 } else if(cekMahasiswa(daftarMahasiswa, Long.parseLong(stringNpm))) {
                     text = String.format("NPM %s sudah pernah ditambahkan sebelumnya", stringNpm);
+                    clearTheField(fieldNama,fieldNPM);
                 }else{
                     daftarMahasiswa.add(new Mahasiswa(nama, Long.parseLong(stringNpm)));
                     text = String.format("Mahasiswa %s-%s berhasil ditambahkan", stringNpm, nama);
+                    clearTheField(fieldNama,fieldNPM);
                 }
                 JOptionPane.showMessageDialog(frame, text);
-                clearTheField(fieldNama,fieldNPM);
             }
         });
 

@@ -63,13 +63,14 @@ public class TambahMataKuliahGUI extends JPanel{
                     text = "Mohon isi seluruh field";
                 } else if(cekMataKuliah(daftarMataKuliah, nama )) {
                     text = String.format("Mata Kuliah %s sudah pernah ditambahkan sebelumnya", nama);
+                    clearTheField(fieldKode, fieldNama, fieldSKS, fieldKapasitas);
                 }else{
                     daftarMataKuliah.add(new MataKuliah(kode, nama, Integer.parseInt(sks), Integer.parseInt(kapasitas)));
                     text = String.format("Mata Kuliah %s berhasil ditambahkan", nama);
+                    clearTheField(fieldKode, fieldNama, fieldSKS, fieldKapasitas);
                 }
                 // menampilkan pesan sesuai kondisi
                 JOptionPane.showMessageDialog(frame, text);
-                clearTheField(fieldKode, fieldNama, fieldSKS, fieldKapasitas);
             }
         });
 
