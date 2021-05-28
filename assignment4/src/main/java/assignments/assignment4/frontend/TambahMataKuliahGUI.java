@@ -13,7 +13,6 @@ public class TambahMataKuliahGUI extends JPanel{
         // membuat dan mengatur label untuk judul
         JLabel titleLabel = new JLabel();
         titleLabel.setText("Tambah Mata Kuliah");
-        titleLabel.setHorizontalAlignment(JLabel.CENTER);
         titleLabel.setFont(SistemAkademikGUI.fontTitle);
         titleLabel.setForeground(Color.white);
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
