@@ -128,7 +128,6 @@ public class HomeGUI {
                 }
                 // menampilkan komponen yang telah ditambahkan ke CardLayout sesuai argumen
                 c.show(mainPage, nextPage);
-                frame.revalidate();
             }
         });
     }
