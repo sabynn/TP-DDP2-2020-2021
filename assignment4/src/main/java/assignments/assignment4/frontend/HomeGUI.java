@@ -3,11 +3,7 @@ package assignments.assignment4.frontend;
 import javax.swing.JFrame;
 import java.awt.*;
 import javax.swing.*;
-import javax.tools.Tool;
 import java.awt.event.*;
-import java.nio.file.FileSystems;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import assignments.assignment4.backend.*;
