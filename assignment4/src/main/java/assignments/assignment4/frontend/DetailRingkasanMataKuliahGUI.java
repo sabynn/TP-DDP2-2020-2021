@@ -69,6 +69,5 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
         this.setBackground(new Color(133, 30, 62));
-        
     }
 }
