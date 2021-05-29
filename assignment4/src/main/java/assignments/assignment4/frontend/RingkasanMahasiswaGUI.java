@@ -30,6 +30,7 @@ public class RingkasanMahasiswaGUI extends JPanel{
 
         // mengatur komponen dan menghias Button
         boxNPM.setMaximumSize(new Dimension(300, 20));
+        boxNPM.setMaximumRowCount(4);
         boxNPM.setAlignmentX(Component.CENTER_ALIGNMENT);
         labelNPM.setAlignmentX(Component.CENTER_ALIGNMENT);
         TambahMahasiswaGUI.modifyButton(btnSubmit, "blue");

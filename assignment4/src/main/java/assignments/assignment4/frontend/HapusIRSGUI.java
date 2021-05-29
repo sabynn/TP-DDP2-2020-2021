@@ -25,14 +25,16 @@ public class HapusIRSGUI extends JPanel {
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // membuat komponen Label dan Button
-        JLabel labelNPM = (new JLabel("Pilih NPM"));
+        JLabel labelNPM = new JLabel("Pilih NPM");
         JLabel labelNama = new JLabel("Pilih Nama Matkul");
         JButton btnSubmit = new JButton("Hapus");
         JButton btnBack = new JButton("Kembali");
 
-        // mengatur ukuran maks dari ComboBox dan membuat komponen menjadi CENTER
+        // mengatur tampilan dari ComboBox dan membuat komponen menjadi CENTER
         boxNPM.setMaximumSize(new Dimension(300, 20));
         boxMatkul.setMaximumSize(new Dimension(300, 20));
+        boxNPM.setMaximumRowCount(4);
+        boxMatkul.setMaximumRowCount(4);
         boxNPM.setAlignmentX(Component.CENTER_ALIGNMENT);
         boxMatkul.setAlignmentX(Component.CENTER_ALIGNMENT);
         labelNPM.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -86,7 +88,6 @@ public class HapusIRSGUI extends JPanel {
         this.add(Box.createVerticalGlue());
         this.setBackground(SistemAkademikGUI.pinkColorBg);
     }
-
 
     private MataKuliah getMataKuliah(String nama) {
         for (MataKuliah mataKuliah : daftarMataKuliah) {

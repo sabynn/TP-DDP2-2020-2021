@@ -30,6 +30,7 @@ public class RingkasanMataKuliahGUI extends JPanel{
 
         // mengatur komponen dan menghias Button
         labelNama.setAlignmentX(Component.CENTER_ALIGNMENT);
+        boxMatkul.setMaximumRowCount(4);
         boxMatkul.setMaximumSize(new Dimension(300, 20));
         boxMatkul.setAlignmentX(Component.CENTER_ALIGNMENT);
         TambahMahasiswaGUI.modifyButton(btnSubmit, "blue");
