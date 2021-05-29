@@ -12,7 +12,6 @@ public class HomeGUI {
 
     private Container mainPage;
     private CardLayout c;
-    private static JFrame frame;
     private TambahIRSGUI panelAddIRS;
     private HapusIRSGUI panelHapusIRS;
     private RingkasanMahasiswaGUI panelRingkasanMhs;
@@ -20,7 +19,6 @@ public class HomeGUI {
 
     public HomeGUI(JFrame frame, ArrayList<Mahasiswa> daftarMahasiswa, ArrayList<MataKuliah> daftarMataKuliah){
         // set layout contentPane frame dengan CardLayout
-        HomeGUI.frame = frame;
         this.mainPage = frame.getContentPane();
         this.c = new CardLayout();
         mainPage.setLayout(c);
