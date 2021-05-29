@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import assignments.assignment4.backend.*;
 
 public class DetailRingkasanMahasiswaGUI extends JPanel{
+
     public DetailRingkasanMahasiswaGUI(JFrame frame, Mahasiswa mahasiswa, ArrayList<Mahasiswa> daftarMahasiswa, ArrayList<MataKuliah> daftarMataKuliah){
         // membuat dan mengatur label untuk judul
         JLabel titleLabel = new JLabel();

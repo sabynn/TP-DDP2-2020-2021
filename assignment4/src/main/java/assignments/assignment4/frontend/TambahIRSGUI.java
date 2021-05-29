@@ -13,6 +13,7 @@ public class TambahIRSGUI extends JPanel{
     private ArrayList<MataKuliah> daftarMataKuliah;
     private JComboBox<Long> boxNPM = new JComboBox<>();
     private JComboBox<String> boxMatkul = new JComboBox<>();
+
     public TambahIRSGUI(JFrame frame, ArrayList<Mahasiswa> daftarMahasiswa, ArrayList<MataKuliah> daftarMataKuliah){
         this.daftarMahasiswa = daftarMahasiswa;
         this.daftarMataKuliah = daftarMataKuliah;

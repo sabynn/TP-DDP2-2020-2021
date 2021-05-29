@@ -9,11 +9,10 @@ import assignments.assignment4.backend.*;
 
 public class RingkasanMataKuliahGUI extends JPanel{
 
-    ArrayList<Mahasiswa> daftarMahasiswa;
-    ArrayList<MataKuliah> daftarMataKuliah;
-    JComboBox<String> boxMatkul = new JComboBox<>();
+    private ArrayList<MataKuliah> daftarMataKuliah;
+    private JComboBox<String> boxMatkul = new JComboBox<>();
+
     public RingkasanMataKuliahGUI(JFrame frame, ArrayList<Mahasiswa> daftarMahasiswa, ArrayList<MataKuliah> daftarMataKuliah){
-        this.daftarMahasiswa = daftarMahasiswa;
         this.daftarMataKuliah = daftarMataKuliah;
 
         // membuat dan mengatur label untuk judul

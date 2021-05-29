@@ -14,6 +14,7 @@ public class SistemAkademik {
 }
 
 class SistemAkademikGUI extends JFrame{
+
     private static ArrayList<Mahasiswa> daftarMahasiswa = new ArrayList<Mahasiswa>();
     private static ArrayList<MataKuliah> daftarMataKuliah = new ArrayList<MataKuliah>();
     public static Font fontGeneral = new Font("Century Gothic", Font.BOLD , 10);

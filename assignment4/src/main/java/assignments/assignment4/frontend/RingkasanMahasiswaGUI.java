@@ -10,11 +10,10 @@ import assignments.assignment4.backend.*;
 public class RingkasanMahasiswaGUI extends JPanel{
 
     ArrayList<Mahasiswa> daftarMahasiswa;
-    ArrayList<MataKuliah> daftarMataKuliah;
     JComboBox<Long> boxNPM = new JComboBox<>();
+
     public RingkasanMahasiswaGUI(JFrame frame, ArrayList<Mahasiswa> daftarMahasiswa, ArrayList<MataKuliah> daftarMataKuliah){
         this.daftarMahasiswa = daftarMahasiswa;
-        this.daftarMataKuliah = daftarMataKuliah;
 
         // membuat dan mengatur label untuk judul
         JLabel titleLabel = new JLabel();
