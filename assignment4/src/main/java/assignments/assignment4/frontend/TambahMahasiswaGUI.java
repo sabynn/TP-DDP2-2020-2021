@@ -20,18 +20,20 @@ public class TambahMahasiswaGUI extends JPanel{
         // membuat komponen TextField, Label, dan Button
         JTextField fieldNama = new JTextField();
         JTextField fieldNPM = new JTextField();
-        JLabel labelNama = new JLabel("Nama:");
-        JLabel labelNPM = (new JLabel("NPM:"));
+        JLabel labelNama = new JLabel("Nama");
+        JLabel labelNPM = new JLabel("NPM");
         JButton btnSubmit = new JButton("Tambahkan");
         JButton btnBack = new JButton("Kembali");
 
-        // mengatur ukuran maks dari TextField dan membuat komponen menjadi CENTER
-        fieldNama.setMaximumSize(new Dimension(300, 30));
-        fieldNPM.setMaximumSize(new Dimension(300, 30));
-        fieldNama.setAlignmentX(Component.CENTER_ALIGNMENT);
-        fieldNPM.setAlignmentX(Component.CENTER_ALIGNMENT);
+        // mengatur label
+        labelNama.setFont(SistemAkademikGUI.fontGeneral);
+        labelNPM.setFont(SistemAkademikGUI.fontGeneral);
         labelNama.setAlignmentX(Component.CENTER_ALIGNMENT);
         labelNPM.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        // mengatur dan menghias TextField
+        modifyField(fieldNama);
+        modifyField(fieldNPM);
 
         // mengatur dan menghias Button
         modifyButton(btnSubmit, "blue");
@@ -75,9 +77,11 @@ public class TambahMahasiswaGUI extends JPanel{
         this.add(titleLabel);
         this.add(Box.createRigidArea(new Dimension(0, 40)));
         this.add(labelNama);
+        this.add(Box.createRigidArea(new Dimension(0, 8)));
         this.add(fieldNama);
         this.add(Box.createRigidArea(new Dimension(0, 20)));
         this.add(labelNPM);
+        this.add(Box.createRigidArea(new Dimension(0, 8)));
         this.add(fieldNPM);
         this.add(Box.createRigidArea(new Dimension(0, 40)));
         this.add(btnSubmit);
@@ -91,7 +95,7 @@ public class TambahMahasiswaGUI extends JPanel{
         b.setBackground(Color.WHITE);
         b.setMaximumSize(new Dimension(200, 20));
         b.setAlignmentX(Component.CENTER_ALIGNMENT);
-        b.setFont(SistemAkademikGUI.fontGeneral);
+        b.setFont(SistemAkademikGUI.fontButton);
         b.setFocusPainted(false);
         b.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
@@ -101,6 +105,14 @@ public class TambahMahasiswaGUI extends JPanel{
         }else{
             b.setForeground(SistemAkademikGUI.pinkColor);
         }
+    }
+
+    protected static void modifyField(JTextField f){
+        // mengatur setiap textField
+        f.setMaximumSize(new Dimension(250, 30));
+        f.setAlignmentX(Component.CENTER_ALIGNMENT);
+        f.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.WHITE));
+        f.setOpaque(false);
     }
 
     // cek apakah mahasiswa dengan npm tertentu telah terdaftar

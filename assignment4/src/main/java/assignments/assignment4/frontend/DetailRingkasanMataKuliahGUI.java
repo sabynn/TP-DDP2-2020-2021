@@ -48,7 +48,7 @@ public class DetailRingkasanMataKuliahGUI extends JPanel{
         btnBack.setBackground(Color.WHITE);
         btnBack.setMaximumSize(new Dimension(200, 20));
         btnBack.setAlignmentX(Component.CENTER_ALIGNMENT);
-        btnBack.setFont(SistemAkademikGUI.fontGeneral);
+        btnBack.setFont(SistemAkademikGUI.fontButton);
         btnBack.setFocusPainted(false);
         btnBack.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         btnBack.setForeground(new Color(133, 30, 62));

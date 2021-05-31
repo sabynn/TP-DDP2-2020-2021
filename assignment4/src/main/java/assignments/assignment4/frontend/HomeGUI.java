@@ -5,13 +5,14 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.concurrent.CompletableFuture;
 
 import assignments.assignment4.backend.*;
 
-public class HomeGUI {
+public class HomeGUI extends Panel{
 
     private Container mainPage;
-    private CardLayout c;
+    private CardLayout cl;
     private TambahIRSGUI panelAddIRS;
     private HapusIRSGUI panelHapusIRS;
     private RingkasanMahasiswaGUI panelRingkasanMhs;
@@ -20,8 +21,8 @@ public class HomeGUI {
     public HomeGUI(JFrame frame, ArrayList<Mahasiswa> daftarMahasiswa, ArrayList<MataKuliah> daftarMataKuliah){
         // set layout contentPane frame dengan CardLayout
         this.mainPage = frame.getContentPane();
-        this.c = new CardLayout();
-        mainPage.setLayout(c);
+        this.cl = new CardLayout();
+        mainPage.setLayout(cl);
 
         // membuat dan mengatur label untuk judul
         JLabel titleLabel = new JLabel();
@@ -38,14 +39,6 @@ public class HomeGUI {
         JButton btnRingkasanMhs = new JButton("Lihat Ringkasan Mahasiswa");
         JButton btnRingkasanMk = new JButton("Lihat Ringkasan Mata Kuliah");
 
-        // mengatur, menghias, dan menambahkan ActionEvent dari Button
-        modifyButton(btnMahasiswa, "blue", "addMhs");
-        modifyButton(btnMatkul, "pink", "addMk");
-        modifyButton(btnAddIRS, "blue","addIRS");
-        modifyButton(btnHapusIRS, "pink", "hapusIRS");
-        modifyButton(btnRingkasanMhs, "blue", "ringkasanMhs");
-        modifyButton(btnRingkasanMk, "pink", "ringkasanMk");
-
         // menampilkan gambar
         ImageIcon icn = new ImageIcon((Toolkit.getDefaultToolkit().getImage("./img/book.png"))
                 .getScaledInstance(200, 200, Image.SCALE_SMOOTH));
@@ -53,21 +46,21 @@ public class HomeGUI {
         imgLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // membuat dan mengatur Panel
-        JPanel cover = new JPanel();
-        cover.setLayout(new BoxLayout(cover, BoxLayout.Y_AXIS));
-        cover.setBackground(SistemAkademikGUI.blueColor);
+//        JPanel cover = new JPanel();
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        this.setBackground(SistemAkademikGUI.blueColor);
 
         // menambahkan dan mengatur setiap komponen ke Panel cover
-        cover.add(Box.createVerticalGlue());
-        cover.add(titleLabel);
-        cover.add(imgLabel);
-        cover.add(btnMahasiswa);
-        cover.add(btnMatkul);
-        cover.add(btnAddIRS);
-        cover.add(btnHapusIRS);
-        cover.add(btnRingkasanMhs);
-        cover.add(btnRingkasanMk);
-        cover.add(Box.createVerticalGlue());
+        this.add(Box.createVerticalGlue());
+        this.add(titleLabel);
+        this.add(imgLabel);
+        modifyButton(btnMahasiswa, "blue", "addMhs");
+        modifyButton(btnMatkul, "pink", "addMk");
+        modifyButton(btnAddIRS, "blue","addIRS");
+        modifyButton(btnHapusIRS, "pink", "hapusIRS");
+        modifyButton(btnRingkasanMhs, "blue", "ringkasanMhs");
+        modifyButton(btnRingkasanMk, "pink", "ringkasanMk");
+        this.add(Box.createVerticalGlue());
 
         // membuat Panel untuk halaman-halaman selanjutnya
         TambahMahasiswaGUI panelAddMhs = new TambahMahasiswaGUI(frame, daftarMahasiswa, daftarMataKuliah);
@@ -78,7 +71,7 @@ public class HomeGUI {
         this.panelRingkasanMk = new RingkasanMataKuliahGUI(frame, daftarMahasiswa, daftarMataKuliah);
 
         // menambahkan setiap panel ke contentPane dari frame
-        mainPage.add(cover);
+        mainPage.add(this);
         mainPage.add(panelAddMhs);
         mainPage.add(panelAddMk);
         mainPage.add(panelAddIRS);
@@ -87,13 +80,13 @@ public class HomeGUI {
         mainPage.add(panelRingkasanMk);
 
         // menambahkan komponen ke CardLayout
-        c.addLayoutComponent(cover, "homepage");
-        c.addLayoutComponent(panelAddMhs, "addMhs");
-        c.addLayoutComponent(panelAddMk, "addMk");
-        c.addLayoutComponent(panelAddIRS, "addIRS");
-        c.addLayoutComponent(panelHapusIRS, "hapusIRS");
-        c.addLayoutComponent(panelRingkasanMhs, "ringkasanMhs");
-        c.addLayoutComponent(panelRingkasanMk, "ringkasanMk");
+        cl.addLayoutComponent(this, "homepage");
+        cl.addLayoutComponent(panelAddMhs, "addMhs");
+        cl.addLayoutComponent(panelAddMk, "addMk");
+        cl.addLayoutComponent(panelAddIRS, "addIRS");
+        cl.addLayoutComponent(panelHapusIRS, "hapusIRS");
+        cl.addLayoutComponent(panelRingkasanMhs, "ringkasanMhs");
+        cl.addLayoutComponent(panelRingkasanMk, "ringkasanMk");
     }
 
     public void modifyButton(JButton b, String color, String nextPage){
@@ -102,8 +95,9 @@ public class HomeGUI {
         b.setBackground(Color.WHITE);
         b.setMaximumSize(new Dimension(200, 20));
         b.setAlignmentX(Component.CENTER_ALIGNMENT);
-        b.setFont(SistemAkademikGUI.fontGeneral);
+        b.setFont(SistemAkademikGUI.fontButton);
         b.setFocusPainted(false);
+        this.add(b);
 
         // memberi warna Button sesuai argumen
         if (color.equals("blue")) {
@@ -125,7 +119,7 @@ public class HomeGUI {
                     panelRingkasanMk.updateDropDown();
                 }
                 // menampilkan komponen yang telah ditambahkan ke CardLayout sesuai argumen
-                c.show(mainPage, nextPage);
+                cl.show(mainPage, nextPage);
             }
         });
     }

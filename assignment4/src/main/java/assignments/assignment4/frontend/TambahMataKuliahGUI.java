@@ -22,28 +22,28 @@ public class TambahMataKuliahGUI extends JPanel{
         JTextField fieldNama = new JTextField();
         JTextField fieldSKS= new JTextField();
         JTextField fieldKapasitas = new JTextField();
-        JLabel labelKode = new JLabel("Kode Mata Kuliah:");
-        JLabel labelNama= new JLabel("Nama Mata Kuliah:");
+        JLabel labelKode = new JLabel("Kode Mata Kuliah");
+        JLabel labelNama= new JLabel("Nama Mata Kuliah");
         JLabel labelSKS= new JLabel("SKS");
-        JLabel labelKapasitas = new JLabel("Kapasitas:");
+        JLabel labelKapasitas = new JLabel("Kapasitas");
         JButton btnSubmit = new JButton("Tambahkan");
         JButton btnBack = new JButton("Kembali");
 
-        // mengatur ukuran maksimum TextField
-        fieldKode.setMaximumSize(new Dimension(300, 30));
-        fieldNama.setMaximumSize(new Dimension(300, 30));
-        fieldSKS.setMaximumSize(new Dimension(300, 30));
-        fieldKapasitas.setMaximumSize(new Dimension(300, 30));
-
-        // mengatur komponen menjadi CENTER
-        fieldKode.setAlignmentX(Component.CENTER_ALIGNMENT);
-        fieldNama.setAlignmentX(Component.CENTER_ALIGNMENT);
-        fieldSKS.setAlignmentX(Component.CENTER_ALIGNMENT);
-        fieldKapasitas.setAlignmentX(Component.CENTER_ALIGNMENT);
+        //  mengatur font label dan mengatur label menjadi CENTER
+        labelKode.setFont(SistemAkademikGUI.fontGeneral);
+        labelNama.setFont(SistemAkademikGUI.fontGeneral);
+        labelSKS.setFont(SistemAkademikGUI.fontGeneral);
+        labelKapasitas.setFont(SistemAkademikGUI.fontGeneral);
         labelKode.setAlignmentX(Component.CENTER_ALIGNMENT);
         labelNama.setAlignmentX(Component.CENTER_ALIGNMENT);
         labelSKS.setAlignmentX(Component.CENTER_ALIGNMENT);
         labelKapasitas.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        // mengatur dan menghias TextField
+        TambahMahasiswaGUI.modifyField(fieldKode);
+        TambahMahasiswaGUI.modifyField(fieldNama);
+        TambahMahasiswaGUI.modifyField(fieldSKS);
+        TambahMahasiswaGUI.modifyField(fieldKapasitas);
 
         // mengatur dan menghias Button
         TambahMahasiswaGUI.modifyButton(btnSubmit, "blue" );
@@ -89,12 +89,19 @@ public class TambahMataKuliahGUI extends JPanel{
         this.add(titleLabel);
         this.add(Box.createRigidArea(new Dimension(0, 40)));
         this.add(labelKode);
+        this.add(Box.createRigidArea(new Dimension(0, 10)));
         this.add(fieldKode);
+        this.add(Box.createRigidArea(new Dimension(0, 20)));
         this.add(labelNama);
+        this.add(Box.createRigidArea(new Dimension(0, 10)));
         this.add(fieldNama);
+        this.add(Box.createRigidArea(new Dimension(0, 20)));
         this.add(labelSKS);
+        this.add(Box.createRigidArea(new Dimension(0, 10)));
         this.add(fieldSKS);
+        this.add(Box.createRigidArea(new Dimension(0, 20)));
         this.add(labelKapasitas);
+        this.add(Box.createRigidArea(new Dimension(0, 10)));
         this.add(fieldKapasitas);
         this.add(Box.createRigidArea(new Dimension(0, 40)));
         this.add(btnSubmit);
