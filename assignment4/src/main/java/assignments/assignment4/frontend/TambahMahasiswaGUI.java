@@ -105,6 +105,16 @@ public class TambahMahasiswaGUI extends JPanel{
         }else{
             b.setForeground(SistemAkademikGUI.pinkColor);
         }
+
+        b.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(MouseEvent e){
+                b.setBackground(Color.BLACK);
+
+            }
+            public void mouseExited(MouseEvent e){
+                b.setBackground(Color.WHITE);
+            }
+        });
     }
 
     protected static void modifyField(JTextField f){

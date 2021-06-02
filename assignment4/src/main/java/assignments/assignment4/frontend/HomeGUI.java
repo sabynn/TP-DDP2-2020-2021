@@ -5,7 +5,6 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
-import java.util.concurrent.CompletableFuture;
 
 import assignments.assignment4.backend.*;
 
@@ -46,7 +45,6 @@ public class HomeGUI extends Panel{
         imgLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // membuat dan mengatur Panel
-//        JPanel cover = new JPanel();
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setBackground(SistemAkademikGUI.blueColor);
 
@@ -93,10 +91,12 @@ public class HomeGUI extends Panel{
         // mengatur setiap button
         b.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         b.setBackground(Color.WHITE);
-        b.setMaximumSize(new Dimension(200, 20));
+        b.setPreferredSize(new Dimension(200, 30));
+        b.setMaximumSize(new Dimension(200, 30));
         b.setAlignmentX(Component.CENTER_ALIGNMENT);
         b.setFont(SistemAkademikGUI.fontButton);
         b.setFocusPainted(false);
+        b.setBorder(BorderFactory.createEmptyBorder(0,0,0,0));
         this.add(b);
 
         // memberi warna Button sesuai argumen
@@ -120,6 +120,15 @@ public class HomeGUI extends Panel{
                 }
                 // menampilkan komponen yang telah ditambahkan ke CardLayout sesuai argumen
                 cl.show(mainPage, nextPage);
+            }
+        });
+
+        b.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(MouseEvent e){
+                b.setBackground(Color.BLACK);
+            }
+            public void mouseExited(MouseEvent e){
+                b.setBackground(Color.WHITE);
             }
         });
     }
