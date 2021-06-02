@@ -66,7 +66,6 @@ public class DetailRingkasanMahasiswaGUI extends JPanel{
             public void actionPerformed(ActionEvent evt) {
                 Container c = frame.getContentPane();
                 CardLayout cl = (CardLayout) c.getLayout();
-                frame.setSize(500, 450);
                 cl.show(c, "homepage");
             }
         });
