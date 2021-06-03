@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import assignments.assignment4.backend.*;
 
-public class HomeGUI extends Panel{
+public class HomeGUI extends JPanel{
 
     private Container mainPage;
     private CardLayout cl;
