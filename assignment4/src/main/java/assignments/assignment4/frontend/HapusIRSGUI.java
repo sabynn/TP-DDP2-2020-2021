@@ -42,8 +42,8 @@ public class HapusIRSGUI extends JPanel {
         labelNama.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // mengatur dan menghias Button
-        TambahMahasiswaGUI.modifyButton(btnSubmit, "blue");
-        TambahMahasiswaGUI.modifyButton(btnBack, "pink");
+        TambahMahasiswaGUI.modifyButton(btnSubmit, "dark");
+        TambahMahasiswaGUI.modifyButton(btnBack, "blue");
 
         // ActionEvent Button btnSubmit untuk dropMatkul dan menampilkan pesan sesuai kondisi
         btnSubmit.addActionListener(new ActionListener() {
@@ -87,7 +87,7 @@ public class HapusIRSGUI extends JPanel {
         this.add(Box.createRigidArea(new Dimension(0, 5)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(SistemAkademikGUI.pinkColorBg);
+        this.setBackground(SistemAkademikGUI.blueBg);
     }
 
     private MataKuliah getMataKuliah(String nama) {

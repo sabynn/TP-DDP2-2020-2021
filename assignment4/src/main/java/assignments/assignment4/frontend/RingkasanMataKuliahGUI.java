@@ -32,8 +32,8 @@ public class RingkasanMataKuliahGUI extends JPanel{
         boxMatkul.setMaximumRowCount(4);
         boxMatkul.setMaximumSize(new Dimension(300, 20));
         boxMatkul.setAlignmentX(Component.CENTER_ALIGNMENT);
-        TambahMahasiswaGUI.modifyButton(btnSubmit, "blue");
-        TambahMahasiswaGUI.modifyButton(btnBack, "pink");
+        TambahMahasiswaGUI.modifyButton(btnSubmit, "dark");
+        TambahMahasiswaGUI.modifyButton(btnBack, "blue");
 
         // mendapat ContentPane dari frame dan layoutnya
         Container cp = frame.getContentPane();
@@ -54,7 +54,7 @@ public class RingkasanMataKuliahGUI extends JPanel{
                     JScrollPane scrollPane = new JScrollPane(panel);
                     scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
                     scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-                    scrollPane.getVerticalScrollBar().setBackground(new Color(133, 30, 62));
+                    scrollPane.getVerticalScrollBar().setBackground(SistemAkademikGUI.darkBlue);
 
                     cl.addLayoutComponent(scrollPane, "mk");
                     cp.add(scrollPane);
@@ -82,7 +82,7 @@ public class RingkasanMataKuliahGUI extends JPanel{
         this.add(Box.createRigidArea(new Dimension(0, 5)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(SistemAkademikGUI.pinkColorBg);
+        this.setBackground(SistemAkademikGUI.blueBg);
     }
 
     private MataKuliah getMataKuliah(String nama) {

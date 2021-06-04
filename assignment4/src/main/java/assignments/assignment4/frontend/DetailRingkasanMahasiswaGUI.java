@@ -37,7 +37,7 @@ public class DetailRingkasanMahasiswaGUI extends JPanel{
         mahasiswa.cekIRS();
 
         if (mahasiswa.getBanyakMasalahIRS() == 0){
-           cekIRS += "IRS tidak bermasalah" + "<br>";
+            cekIRS += "IRS tidak bermasalah" + "<br>";
         }else {
             for (int i = 0; i < mahasiswa.getBanyakMasalahIRS(); i++) {
                 cekIRS += (i + 1) + ". " + mahasiswa.getMasalahIRS()[i] + "<br>";
@@ -49,8 +49,8 @@ public class DetailRingkasanMahasiswaGUI extends JPanel{
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setAlignmentX(Component.CENTER_ALIGNMENT);
         label.setFont(new Font("Century Gothic", Font.BOLD , 12));
-        label.setForeground(new Color(0, 91, 150));
-        label.setBackground(SistemAkademikGUI.blueColor);
+        label.setForeground(SistemAkademikGUI.darkBlue);
+        label.setBackground(SistemAkademikGUI.blueBg);
         label.setOpaque(true);
 
         // ActionEvent Button btnBack untuk kembali ke HomeGUI
@@ -61,7 +61,7 @@ public class DetailRingkasanMahasiswaGUI extends JPanel{
         btnBack.setFont(SistemAkademikGUI.fontButton);
         btnBack.setFocusPainted(false);
         btnBack.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        btnBack.setForeground(new Color(0, 91, 150));
+        btnBack.setForeground(SistemAkademikGUI.darkBlue);
         btnBack.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Container c = frame.getContentPane();
@@ -79,6 +79,6 @@ public class DetailRingkasanMahasiswaGUI extends JPanel{
         this.add(Box.createRigidArea(new Dimension(0, 40)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(new Color(0, 91, 150));
+        this.setBackground(SistemAkademikGUI.darkBlue);
     }
 }

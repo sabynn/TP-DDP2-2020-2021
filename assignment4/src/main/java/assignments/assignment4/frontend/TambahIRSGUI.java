@@ -40,10 +40,12 @@ public class TambahIRSGUI extends JPanel{
         boxMatkul.setAlignmentX(Component.CENTER_ALIGNMENT);
         labelNPM.setAlignmentX(Component.CENTER_ALIGNMENT);
         labelNama.setAlignmentX(Component.CENTER_ALIGNMENT);
+        labelNPM.setForeground(Color.WHITE);
+        labelNama.setForeground(Color.WHITE);
 
         // mengatur dan menghias Button
-        TambahMahasiswaGUI.modifyButton(btnSubmit, "blue");
-        TambahMahasiswaGUI.modifyButton(btnBack, "pink");
+        TambahMahasiswaGUI.modifyButton(btnSubmit, "dark");
+        TambahMahasiswaGUI.modifyButton(btnBack, "blue");
 
         // ActionEvent Button btnSumbit untuk addMatkul menampilkan pesan sesuai kondisi
         btnSubmit.addActionListener(new ActionListener() {
@@ -86,7 +88,7 @@ public class TambahIRSGUI extends JPanel{
         this.add(Box.createRigidArea(new Dimension(0, 5)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(SistemAkademikGUI.blueColor);
+        this.setBackground(SistemAkademikGUI.darkBlue);
     }
 
     private MataKuliah getMataKuliah(String nama) {
@@ -165,5 +167,4 @@ public class TambahIRSGUI extends JPanel{
             boxMatkul.addItem(m);
         }
     }
-
 }

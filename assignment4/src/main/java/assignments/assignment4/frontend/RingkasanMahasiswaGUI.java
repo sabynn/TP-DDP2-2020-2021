@@ -32,8 +32,9 @@ public class RingkasanMahasiswaGUI extends JPanel{
         boxNPM.setMaximumRowCount(4);
         boxNPM.setAlignmentX(Component.CENTER_ALIGNMENT);
         labelNPM.setAlignmentX(Component.CENTER_ALIGNMENT);
-        TambahMahasiswaGUI.modifyButton(btnSubmit, "blue");
-        TambahMahasiswaGUI.modifyButton(btnBack, "pink");
+        labelNPM.setForeground(Color.WHITE);
+        TambahMahasiswaGUI.modifyButton(btnSubmit, "dark");
+        TambahMahasiswaGUI.modifyButton(btnBack, "blue");
 
         // mendapat ContentPane dari frame dan layoutnya
         Container cp = frame.getContentPane();
@@ -54,7 +55,7 @@ public class RingkasanMahasiswaGUI extends JPanel{
                     JScrollPane scrollPane = new JScrollPane(panel);
                     scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
                     scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-                    scrollPane.getVerticalScrollBar().setBackground(new Color(0, 91, 150));
+                    scrollPane.getVerticalScrollBar().setBackground(SistemAkademikGUI.darkBlue);
 
                     cl.addLayoutComponent(scrollPane, "mhs");
                     cp.add(scrollPane);
@@ -82,7 +83,7 @@ public class RingkasanMahasiswaGUI extends JPanel{
         this.add(Box.createRigidArea(new Dimension(0, 5)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(SistemAkademikGUI.blueColor);
+        this.setBackground(SistemAkademikGUI.darkBlue);
     }
 
     private Mahasiswa getMahasiswa(long npm) {

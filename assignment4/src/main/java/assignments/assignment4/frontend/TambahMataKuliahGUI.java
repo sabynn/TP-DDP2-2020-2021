@@ -40,14 +40,14 @@ public class TambahMataKuliahGUI extends JPanel{
         labelKapasitas.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // mengatur dan menghias TextField
-        TambahMahasiswaGUI.modifyField(fieldKode);
-        TambahMahasiswaGUI.modifyField(fieldNama);
-        TambahMahasiswaGUI.modifyField(fieldSKS);
-        TambahMahasiswaGUI.modifyField(fieldKapasitas);
+        TambahMahasiswaGUI.modifyField(fieldKode, "black");
+        TambahMahasiswaGUI.modifyField(fieldNama, "black");
+        TambahMahasiswaGUI.modifyField(fieldSKS, "black");
+        TambahMahasiswaGUI.modifyField(fieldKapasitas, "black");
 
         // mengatur dan menghias Button
-        TambahMahasiswaGUI.modifyButton(btnSubmit, "blue" );
-        TambahMahasiswaGUI.modifyButton(btnBack, "pink");
+        TambahMahasiswaGUI.modifyButton(btnSubmit, "dark" );
+        TambahMahasiswaGUI.modifyButton(btnBack, "blue");
 
         // ActionEvent Button btnSubmit untuk menampilkan pesan sesuai kondisi
         btnSubmit.addActionListener(new ActionListener() {
@@ -108,7 +108,7 @@ public class TambahMataKuliahGUI extends JPanel{
         this.add(Box.createRigidArea(new Dimension(0, 5)));
         this.add(btnBack);
         this.add(Box.createVerticalGlue());
-        this.setBackground(SistemAkademikGUI.pinkColorBg);
+        this.setBackground(SistemAkademikGUI.blueBg);
     }
 
     // cek apakah mata kuliah dengan nama tertentu telah terdaftar

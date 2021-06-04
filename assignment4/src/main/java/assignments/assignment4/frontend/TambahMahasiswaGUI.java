@@ -28,16 +28,18 @@ public class TambahMahasiswaGUI extends JPanel{
         // mengatur label
         labelNama.setFont(SistemAkademikGUI.fontGeneral);
         labelNPM.setFont(SistemAkademikGUI.fontGeneral);
+        labelNama.setForeground(Color.WHITE);
+        labelNPM.setForeground(Color.WHITE);
         labelNama.setAlignmentX(Component.CENTER_ALIGNMENT);
         labelNPM.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // mengatur dan menghias TextField
-        modifyField(fieldNama);
-        modifyField(fieldNPM);
+        modifyField(fieldNama, "white");
+        modifyField(fieldNPM, "white");
 
         // mengatur dan menghias Button
-        modifyButton(btnSubmit, "blue");
-        modifyButton(btnBack, "pink");
+        modifyButton(btnSubmit, "dark");
+        modifyButton(btnBack, "blue");
 
         // ActionEvent Button btnSubmit untuk menampilkan pesan sesuai kondisi
         btnSubmit.addActionListener(new ActionListener() {
@@ -72,16 +74,16 @@ public class TambahMahasiswaGUI extends JPanel{
 
         // menambahkan dan mengatur setiap komponen ke Panel
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        this.setBackground(SistemAkademikGUI.blueColor);
+        this.setBackground(SistemAkademikGUI.darkBlue);
         this.add(Box.createVerticalGlue());
         this.add(titleLabel);
         this.add(Box.createRigidArea(new Dimension(0, 40)));
         this.add(labelNama);
-        this.add(Box.createRigidArea(new Dimension(0, 8)));
+        this.add(Box.createRigidArea(new Dimension(0, 10)));
         this.add(fieldNama);
         this.add(Box.createRigidArea(new Dimension(0, 20)));
         this.add(labelNPM);
-        this.add(Box.createRigidArea(new Dimension(0, 8)));
+        this.add(Box.createRigidArea(new Dimension(0, 10)));
         this.add(fieldNPM);
         this.add(Box.createRigidArea(new Dimension(0, 40)));
         this.add(btnSubmit);
@@ -100,29 +102,38 @@ public class TambahMahasiswaGUI extends JPanel{
         b.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         // memberi warna Button sesuai argumen
-        if (color.equals("blue")) {
-            b.setForeground(SistemAkademikGUI.blueColor);
+        if (color.equals("dark")) {
+            b.setForeground(SistemAkademikGUI.darkBlue);
         }else{
-            b.setForeground(SistemAkademikGUI.pinkColor);
+            b.setForeground(SistemAkademikGUI.blue);
         }
 
         b.addMouseListener(new java.awt.event.MouseAdapter() {
+            Color c;
             public void mouseEntered(MouseEvent e){
+                c = b.getForeground();
                 b.setBackground(Color.BLACK);
-
+                b.setForeground(SistemAkademikGUI.blueBg);
             }
             public void mouseExited(MouseEvent e){
                 b.setBackground(Color.WHITE);
+                b.setForeground(c);
             }
         });
     }
 
-    protected static void modifyField(JTextField f){
+    protected static void modifyField(JTextField f, String color){
         // mengatur setiap textField
+        f.setFont(SistemAkademikGUI.fontGeneral);
         f.setMaximumSize(new Dimension(250, 30));
         f.setAlignmentX(Component.CENTER_ALIGNMENT);
         f.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.WHITE));
         f.setOpaque(false);
+
+        if (color.equals("white")){
+            f.setForeground(Color.WHITE);
+            f.setCaretColor(Color.WHITE);
+        }
     }
 
     // cek apakah mahasiswa dengan npm tertentu telah terdaftar
