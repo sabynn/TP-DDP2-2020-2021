@@ -111,7 +111,7 @@ public class TambahIRSGUI extends JPanel{
 
 
     // mengembalikan Arrays berisi npm yg sudah terurut
-    public static Long[] npmSorting(ArrayList<Mahasiswa> daftarMahasiswa){
+    protected static Long[] npmSorting(ArrayList<Mahasiswa> daftarMahasiswa){
         int len = daftarMahasiswa.toArray().length;
         Long[] arrayNpm = new Long[len];
 
@@ -133,7 +133,7 @@ public class TambahIRSGUI extends JPanel{
     }
 
     // mengembalikan Arrays berisi nama mata kuliah yg sudah terurut
-    public static String[] matkulSorting(ArrayList<MataKuliah> daftarMataKuliah){
+    protected static String[] matkulSorting(ArrayList<MataKuliah> daftarMataKuliah){
         int len = daftarMataKuliah.toArray().length;
         String[] arrayMatkul = new String[len];
 
