@@ -50,7 +50,7 @@ public class HomeGUI extends JPanel{
         JComponent imgLabel = new JLabel(setIcn);
         imgLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        // membuat dan mengatur Panel
+        // mengatur Panel
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setBackground(SistemAkademikGUI.darkBlue);
 
@@ -67,7 +67,7 @@ public class HomeGUI extends JPanel{
         modifyButton(btnRingkasanMk, "blue", "ringkasanMk");
         this.add(Box.createVerticalGlue());
 
-        // membuat Panel untuk menggabungkan gambar dengan Panel button
+        // membuat Panel cover untuk menggabungkan gambar dengan Panel label dan button
         JPanel cover = new JPanel(new BorderLayout());
         cover.add(imgLabel, BorderLayout.WEST);
         cover.add(this);
