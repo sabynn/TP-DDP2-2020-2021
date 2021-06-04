@@ -96,7 +96,7 @@ public class RingkasanMahasiswaGUI extends JPanel{
     }
 
     // memperbarui ComboBox sesuai isi daftar terbaru
-    public void updateDropDown(){
+    protected void updateDropDown(){
         boxNPM.removeAllItems();
         for(Long m: TambahIRSGUI.npmSorting(daftarMahasiswa)) {
             boxNPM.addItem(m);

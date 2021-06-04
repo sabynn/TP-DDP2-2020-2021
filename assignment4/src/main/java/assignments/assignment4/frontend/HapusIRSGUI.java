@@ -109,7 +109,7 @@ public class HapusIRSGUI extends JPanel {
     }
 
     // memperbarui ComboBox sesuai isi daftar terbaru
-    public void updateDropDown(){
+    protected void updateDropDown(){
         boxNPM.removeAllItems();
         boxMatkul.removeAllItems();
         for(Long m: TambahIRSGUI.npmSorting(daftarMahasiswa)) {

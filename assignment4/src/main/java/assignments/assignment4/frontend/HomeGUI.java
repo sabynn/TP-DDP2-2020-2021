@@ -99,7 +99,7 @@ public class HomeGUI extends JPanel{
         cl.addLayoutComponent(panelRingkasanMk, "ringkasanMk");
     }
 
-    public void modifyButton(JButton b, String color, String nextPage){
+    protected void modifyButton(JButton b, String color, String nextPage){
         // mengatur setiap button
         b.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         b.setBackground(Color.WHITE);

@@ -95,7 +95,7 @@ public class RingkasanMataKuliahGUI extends JPanel{
     }
 
     // memperbarui ComboBox sesuai isi daftar terbaru
-    public void updateDropDown(){
+    protected void updateDropDown(){
         boxMatkul.removeAllItems();
         for(String m: TambahIRSGUI.matkulSorting(daftarMataKuliah)) {
             boxMatkul.addItem(m);
