@@ -108,6 +108,7 @@ public class TambahMahasiswaGUI extends JPanel{
             b.setForeground(SistemAkademikGUI.blue);
         }
 
+        // mengubah warna button saat mouse hover
         b.addMouseListener(new java.awt.event.MouseAdapter() {
             Color c;
             public void mouseEntered(MouseEvent e){
@@ -146,6 +147,7 @@ public class TambahMahasiswaGUI extends JPanel{
         return false;
     }
 
+    // mengosongkan semua field
     private void clearTheField(JTextField a, JTextField b){
         a.setText("");
         b.setText("");
